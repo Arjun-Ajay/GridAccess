@@ -1,3 +1,84 @@
-.section_one{
-    
+:root{
+    --clr1:white;
+    --clr2:grey;
+    --lightgrey:#332e2f;
+    --DeepRed:#ef0d32;
+    --LightRed:#f20d33;
+    --grad0:#231013;
+    --grad100:#221013;
+}
+
+.main-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.video-container{
+    display: grid;
+    position: relative;
+}
+video{
+    grid-area:1/1;
+    width: 60vw;
+    height:60vh;
+    object-fit:cover;
+    z-index:1;
+    border: 1px solid var(--lightgrey);
+    border-radius: 8px;
+}
+.video-overlay{
+    grid-area:1/1;
+    width: 50vw;
+    height:50vh;
+    padding-top: 5rem;
+    padding-left:7rem;
+    z-index:2;
+    justify-content: center;
+}
+.nextrace-info{
+    display: grid;
+    gap: 2rem;
+}
+#race-countryname{
+    color: var(--DeepRed);
+}
+.race-title{
+    display: block;
+    text-align: left;
+    font-style:BOLD;
+    font-weight: 900;
+    font-size: 4rem;
+    letter-spacing: 2px;
+}
+.clock{
+    display: grid;
+    grid-template-rows: 1fr 2fr 1fr;
+    height:20vh;
+    width:25vw;
+    border: 2px solid var(--lightgrey);
+    border-radius: 8px;
+    background-color: black;
+    opacity: 0.7;
+}
+#clock-header{
+    display:block;
+    text-align: center;
+    padding-top:1rem;
+    font-size:1.5rem;
+    font-weight:600;
+    font-style: bold;
+    color: var(--LightRed);
+}
+#clock-body{
+    color: var(--clr1);
+}
+#track-info{
+    display:flex;
+    justify-content: left;
+    padding:2rem;
+    gap:1rem;
+    color: var(--clr2);
+    font-weight: 500;
+    font-size:1.5rem;
 }
