@@ -30,6 +30,12 @@ body{
     background-size:cover;
 }
 
+.layout{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
 header{
     width: 100%;
     height: 8rem;
@@ -38,11 +44,8 @@ header{
     justify-content: space-between;
     align-items: center;
     display: flex;
-    z-index: 100;
-    top:0;
     border-bottom: 1px solid var(--LightRed);
 }
-
 .logo{
     display: flex;
     justify-content: space-between;
@@ -53,7 +56,6 @@ header{
     display: flex;
     gap: 4rem;
 }
-
 #activeTab{
     color: var(--DeepRed);
     border-bottom: 2px solid var(--DeepRed);
@@ -69,15 +71,14 @@ header{
     border-bottom: 2px solid var(--DeepRed);
 }
 
+main{
+    flex: 1;
+    padding: 2rem;
+}
+
 footer{
-    position: absolute;
     width: 100%;
     height: 8rem;
-    padding-left: 3rem;
-    padding-right: 3rem;
-    justify-content: space-between;
-    align-items: center;
-    display: flex;
-    bottom:0;
+    padding: 2rem;
     border-top: 0.01rem solid var(--lightgrey);
  }
