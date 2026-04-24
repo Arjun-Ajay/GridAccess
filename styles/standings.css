@@ -1,0 +1,346 @@
+/* standings.css */
+
+/* ========================= */
+/* HERO BACKGROUND */
+/* ========================= */
+
+.main-content .hero-bg {
+    background: linear-gradient(180deg, #2a070a 0%, #140304 60%, transparent 100%);
+    padding-bottom: 10px;
+}
+
+/* HERO */
+
+.main-content .hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 60px 10px;
+}
+
+.main-content .hero-left h1 {
+    font-size: 48px;
+    color: #d0d0d0;
+    font-style: italic;
+}
+
+.main-content .hero-left h2 {
+    font-size: 64px;
+    color: #ff1e2d;
+    font-style: italic;
+}
+
+.main-content .hero-left p {
+    color: #9a9a9a;
+    font-size: 14px;
+    max-width: 480px;
+}
+
+/* NEXT RACE */
+
+.main-content .next-race {
+    background: linear-gradient(145deg, #2a0a0d, #150405);
+    padding: 16px 20px;
+    border-radius: 10px;
+    border: 1px solid rgba(255,30,45,0.25);
+    width: 220px;
+}
+
+.main-content .next-race span {
+    font-size: 10px;
+    color: #aaa;
+}
+
+.main-content .next-race h3 {
+    font-size: 14px;
+    color: white;
+}
+
+.main-content .next-race .timer {
+    font-weight: bold;
+}
+
+/* TABS */
+
+.main-content .tabs {
+    display: flex;
+    gap: 25px;
+    padding: 0 60px;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+.main-content .tabs button {
+    background: none;
+    border: none;
+    color: #888;
+    font-size: 13px;
+    padding-bottom: 10px;
+}
+
+.main-content .tabs .active {
+    color: #ff1e2d;
+    border-bottom: 2px solid #ff1e2d;
+}
+
+/* ========================= */
+/* TABLE */
+/* ========================= */
+
+.main-content .standings-table {
+    margin: 30px 60px;
+}
+
+.main-content table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+    background: linear-gradient(180deg, #2b0d10, #1a0a0c);
+    border-radius: 14px;
+    overflow: hidden;
+}
+
+.main-content thead {
+    background: linear-gradient(90deg, #3a1418, #2a0d0f);
+}
+
+.main-content th {
+    padding: 16px;
+    font-size: 11px;
+    color: #8c8c8c;
+    text-transform: uppercase;
+}
+
+.main-content td {
+    padding: 16px;
+}
+
+/* COLUMN WIDTHS */
+
+.main-content th:nth-child(1),
+.main-content td:nth-child(1) {
+    width: 60px;
+}
+
+.main-content th:nth-child(2),
+.main-content td:nth-child(2) {
+    width: 300px;
+}
+
+.main-content th:nth-child(7),
+.main-content td:nth-child(7) {
+    width: 120px;
+}
+
+/* ROW LINES */
+
+.main-content tbody tr {
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+
+/* POSITION */
+
+.main-content .pos {
+    color: #ff1e2d;
+    font-weight: bold;
+    font-style: italic;
+}
+
+/* DRIVER */
+
+.main-content .driver-info {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.main-content .driver img {
+    width: 40px;
+    border-radius: 50%;
+    border: 2px solid #ff1e2d;
+    padding: 2px;
+}
+
+.main-content .driver-info strong {
+    font-size: 13px;
+}
+
+.main-content .driver-info small {
+    font-size: 10px;
+    color: #999;
+}
+
+/* TEAM COLOR LINE */
+
+.main-content .team {
+    position: relative;
+}
+
+.main-content .team.rb::after {
+    content: "";
+    position: absolute;
+    bottom: -6px;
+    left: 0;
+    width: 40px;
+    height: 2px;
+    background: #3da5ff;
+}
+
+.main-content .team.fer::after {
+    content: "";
+    position: absolute;
+    bottom: -6px;
+    left: 0;
+    width: 40px;
+    height: 2px;
+    background: #ff1e2d;
+}
+
+.main-content .team.mcl::after {
+    content: "";
+    position: absolute;
+    bottom: -6px;
+    left: 0;
+    width: 40px;
+    height: 2px;
+    background: orange;
+}
+
+/* POINTS */
+
+.main-content .points {
+    font-size: 18px;
+    font-weight: bold;
+    text-align: right;
+}
+
+/* HOVER */
+
+.main-content tbody tr:hover {
+    background: rgba(255,0,0,0.06);
+}
+
+/* ========================= */
+/* UPDATED CARDS */
+/* ========================= */
+
+.main-content .bottom-cards{
+    display:flex;
+    gap:18px;
+    padding:35px 60px 50px;
+    align-items:stretch;
+}
+
+.main-content .card{
+    flex:1;
+    min-height:126px;
+    padding:20px 22px;
+    border-radius:14px;
+    background:linear-gradient(145deg,#1b0608,#27090d);
+    border:1px solid rgba(255,255,255,0.04);
+    display:flex;
+    flex-direction:column;
+}
+
+.main-content .card-top{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    margin-bottom:18px;
+}
+
+.main-content .icon-box{
+    width:28px;
+    height:28px;
+    border-radius:7px;
+    background:#2a0c10;
+    color:#ff1e2d;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:12px;
+}
+
+.main-content .icon-box.white{
+    background:rgba(255,255,255,0.15);
+    color:white;
+}
+
+.main-content .card h4{
+    margin:0;
+    color:white;
+    font-size:11px;
+    font-style:italic;
+}
+
+.main-content .stat-card p{
+    margin:0;
+    color:white;
+    font-size:33px;
+    font-style:italic;
+    font-weight:700;
+    line-height:1;
+}
+
+.main-content .stat-card small{
+    margin-top:8px;
+    color:#9d9d9d;
+    font-size:10px;
+}
+
+.main-content .highlight{
+    background:linear-gradient(145deg,#ff0022,#ff2341);
+    box-shadow:0 0 20px rgba(255,0,40,0.35);
+}
+
+.main-content .highlight .alert-text{
+    color:white;
+    font-size:11px;
+    line-height:1.7;
+    margin-bottom:14px;
+}
+
+.main-content .highlight button{
+    margin-top:auto;
+    width:100%;
+    height:38px;
+    border:none;
+    border-radius:8px;
+    background:#f2f2f2;
+    color:#111;
+    font-size:11px;
+    font-style:italic;
+    font-weight:700;
+    cursor:pointer;
+}
+
+.main-content .highlight button:hover{
+    background:white;
+}
+
+/* ========================= */
+/* UPDATED FOOTER */
+/* ========================= */
+
+.footer{
+    border-top:1px solid rgba(255,255,255,0.08);
+    padding:20px 60px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    color:#7f7f7f;
+    font-size:10px;
+}
+
+.footer-right{
+    display:flex;
+    gap:26px;
+}
+
+.footer-right a{
+    color:#7f7f7f;
+    text-decoration:none;
+}
+
+.footer-right a:hover{
+    color:white;
+}
