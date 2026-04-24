@@ -6,13 +6,18 @@
     --LightRed:#f20d33;
     --grad0:#231013;
     --grad100:#221013;
+    --fadedRed:#2d1c1f;
 }
 
 .main-content{
     display: flex;
     flex-direction: column;
+    align-items: left;
+}
+
+.section-one{
+    display: grid;
     justify-content: center;
-    align-items: center;
 }
 .video-container{
     display: grid;
@@ -25,7 +30,7 @@ video{
     object-fit:cover;
     z-index:1;
     border: 1px solid var(--lightgrey);
-    border-radius: 8px;
+    border-radius: 12px;
 }
 .video-overlay{
     grid-area:1/1;
@@ -46,8 +51,8 @@ video{
 .race-title{
     display: block;
     text-align: left;
-    font-style:BOLD;
-    font-weight: 900;
+    font-style:italic;
+    font-weight: bold;
     font-size: 4rem;
     letter-spacing: 2px;
 }
@@ -57,7 +62,7 @@ video{
     height:20vh;
     width:25vw;
     border: 2px solid var(--lightgrey);
-    border-radius: 8px;
+    border-radius: 12px;
     background-color: black;
     opacity: 0.7;
 }
@@ -69,9 +74,37 @@ video{
     font-weight:600;
     font-style: bold;
     color: var(--LightRed);
+    letter-spacing: 2px;
 }
 #clock-body{
     color: var(--clr1);
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    margin-left: auto;
+    margin-right: auto;
+    gap:2rem;
+    justify-content: center;
+    align-items: center;
+}
+.time-box{
+    background-color: var(--fadedRed);
+    padding-top:2rem;
+    border: 1px solid var(--lightgrey);
+    border-radius: 15px;
+    width: 7rem;
+    height: 7rem;
+    text-align: center;
+    font-weight: bold;
+}
+.time-box span{
+  display: block;
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+.time-box p{
+  font-size: 1rem;
+  margin-top: 0.5rem;
+  letter-spacing: 1px;
 }
 #track-info{
     display:flex;
@@ -81,4 +114,69 @@ video{
     color: var(--clr2);
     font-weight: 500;
     font-size:1.5rem;
+}
+#track-info img{
+    width:2rem;
+}
+hr{
+    background-color: var(--clr2);
+    width:1px;
+}
+
+#buyNow{
+    width:10vw;
+    color: var(--clr1);
+    padding: 1rem 3rem;
+    border-radius: 6px;
+    background-color: var(--LightRed);
+    letter-spacing: 2px;
+    font-size:1.3rem;
+    font-weight: bold;
+    text-align: center;
+}
+#buyNow:hover{
+    box-shadow: 0 0 10px var(--LightRed);
+}
+
+
+#section-heading{
+    display: flex;
+    justify-content: flex-start;
+    border-left:2px solid var(--DeepRed);
+    padding:1rem;
+}
+
+.section-two{
+    display:flex;
+    width:90%;
+    margin-left:10rem;
+    margin-right: 10rem;
+    gap:2rem;
+    overflow-x: auto;
+}
+.section-two::-webkit-scrollbar{
+    display: none;
+}
+.section-two-slider{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap:1rem;
+    animation: spin 30s infinite linear;
+}
+
+.cards{
+    flex:0 0 5rem;
+    width:32rem;
+    height:18rem;
+    padding-right:1rem;
+}
+.cards img{
+    width:32rem;
+    height:18rem;
+}
+
+@keyframes spin{
+    from {translate: 0;}
+    to {translate: -100%;}
 }
