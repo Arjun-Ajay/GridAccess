@@ -123,6 +123,10 @@ hr{
     width:1px;
 }
 
+.buttons{
+    display: flex;
+    gap:1rem;
+}
 #buyNow{
     width:10vw;
     color: var(--clr1);
@@ -137,13 +141,29 @@ hr{
 #buyNow:hover{
     box-shadow: 0 0 10px var(--LightRed);
 }
-
+#watchNow{
+    width:10vw;
+    color: var(--clr1);
+    padding: 1rem 3rem;
+    border-radius: 6px;
+    border:1px solid var(--clr2);
+    background-color: var(--lightgrey);
+    opacity: 0.8;
+    letter-spacing: 2px;
+    font-size:1.3rem;
+    font-weight: bold;
+    text-align: center;
+}
+#watchNow:hover{
+    box-shadow: 0 0 10px var(--clr2);
+}
 
 #section-heading{
     display: flex;
     justify-content: flex-start;
     border-left:2px solid var(--DeepRed);
     padding:1rem;
+    font-style: italic;
 }
 
 .section-two{
@@ -152,7 +172,7 @@ hr{
     margin-left:10rem;
     margin-right: 10rem;
     gap:2rem;
-    overflow-x: auto;
+    overflow-x: hidden;
 }
 .section-two::-webkit-scrollbar{
     display: none;
@@ -174,6 +194,42 @@ hr{
 .cards img{
     width:32rem;
     height:18rem;
+    object-fit: cover;
+}
+.cards img:hover{
+    transform: scale(1.15,1.15);
+    border: 1px solid var(--clr2);
+}
+
+.section-three{
+    display: flex;
+    gap:1rem;
+    width:90%;
+    margin-left: 10rem;
+    margin-right: 10rem;
+}
+.news-cards{
+    width:42rem;
+    height:20rem;
+    padding-right:1rem;
+    background-color: var(--fadedRed);
+    border: 2px solid transparent;
+}
+.news-cards:hover{
+    border: 1px solid var(--DeepRed);
+    box-shadow: 0 0 8px var(--DeepRed);
+    transform: scale(1.15,1.15);
+}
+
+footer{
+    color:var(--clr2);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+footer a{
+    color: var(--clr2);
+    border-bottom: 1px solid var(--clr2);
 }
 
 @keyframes spin{
