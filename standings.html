@@ -1,32 +1,235 @@
+<!-- standings.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- COMMON STYLES -->
     <link rel="stylesheet" href="styles/common_styles.css">
 
-    
+    <!-- PAGE STYLES -->
+    <link rel="stylesheet" href="styles/standings.css">
+
     <title>GridAccess - Standings</title>
 </head>
+
 <body>
 <div class="layout">
+
+    <!-- HEADER -->
     <header>
         <div class="logo">
-            <img src="images/mainlogo.png" alt="LOGO"><H1>GRID ACCESS</H1>
-        </div>
-       <ul class="navigation">
-                <li><a href="home.html">Home</a></li>
-                <li><a href="calender.html">Race Calender</a></li>
-                <li><a href="tickets.html">Tickets</a></li>
-                <li><a id="activeTab" href="standings.html">Standings</a></li>
-        </ul>
-        <div class="profile">
-            <img src="images/user.png" alt="PROFILE_Pic">
+            <img src="images/mainlogo.png">
+            <h1>GRID ACCESS</h1>
         </div>
 
+        <ul class="navigation">
+            <li><a href="home.html">Home</a></li>
+            <li><a href="calender.html">Race Calender</a></li>
+            <li><a href="tickets.html">Tickets</a></li>
+            <li><a id="activeTab" href="standings.html">Standings</a></li>
+        </ul>
+
+        <div class="profile">
+            <img src="images/user.png">
+        </div>
     </header>
-    <main class="main-content">Body Content</main>
-    <footer class="footer">Footer Content</footer>
+
+    <!-- MAIN -->
+    <main class="main-content">
+
+        <!-- HERO -->
+        <div class="hero-bg">
+
+            <section class="hero">
+                <div class="hero-left">
+                    <h1>CHAMPIONSHIP</h1>
+                    <h2>STANDINGS</h2>
+                    <p>
+                        Live updates from the 2024 FIA Formula One World Championship.
+                        Track every point, win, and podium in the race for the title.
+                    </p>
+                </div>
+
+                <div class="next-race">
+                    <span>NEXT RACE</span>
+                    <h3>BRITISH GRAND PRIX</h3>
+                    <div class="timer">04:12:45</div>
+                </div>
+            </section>
+
+            <section class="tabs">
+                <button class="active">Driver Standings</button>
+                <button>Constructor Standings</button>
+            </section>
+
+        </div>
+
+        <!-- TABLE -->
+        <section class="standings-table">
+            <table>
+                <thead>
+                    <tr>
+                        <th>POS</th>
+                        <th>DRIVER</th>
+                        <th>NATIONALITY</th>
+                        <th>TEAM</th>
+                        <th>WINS</th>
+                        <th>PODIUMS</th>
+                        <th>POINTS</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+
+                    <tr>
+                        <td class="pos">01</td>
+                        <td class="driver">
+                            <div class="driver-info">
+                                <img src="images/user.png">
+                                <div>
+                                    <strong>MAX VERSTAPPEN</strong>
+                                    <small>RED BULL RACING</small>
+                                </div>
+                            </div>
+                        </td>
+                        <td>NED</td>
+                        <td class="team rb">RB20</td>
+                        <td>7</td>
+                        <td>9</td>
+                        <td class="points">219</td>
+                    </tr>
+
+                    <tr>
+                        <td class="pos">02</td>
+                        <td class="driver">
+                            <div class="driver-info">
+                                <img src="images/user.png">
+                                <div>
+                                    <strong>LANDO NORRIS</strong>
+                                    <small>MCLAREN</small>
+                                </div>
+                            </div>
+                        </td>
+                        <td>GBR</td>
+                        <td class="team mcl">MCL38</td>
+                        <td>1</td>
+                        <td>6</td>
+                        <td class="points">150</td>
+                    </tr>
+
+                    <tr>
+                        <td class="pos">03</td>
+                        <td class="driver">
+                            <div class="driver-info">
+                                <img src="images/user.png">
+                                <div>
+                                    <strong>CHARLES LECLERC</strong>
+                                    <small>FERRARI</small>
+                                </div>
+                            </div>
+                        </td>
+                        <td>MON</td>
+                        <td class="team fer">SF-24</td>
+                        <td>1</td>
+                        <td>5</td>
+                        <td class="points">148</td>
+                    </tr>
+
+                    <tr>
+                        <td class="pos">04</td>
+                        <td class="driver">
+                            <div class="driver-info">
+                                <img src="images/user.png">
+                                <div>
+                                    <strong>CARLOS SAINZ</strong>
+                                    <small>FERRARI</small>
+                                </div>
+                            </div>
+                        </td>
+                        <td>ESP</td>
+                        <td class="team fer">SF-24</td>
+                        <td>1</td>
+                        <td>4</td>
+                        <td class="points">116</td>
+                    </tr>
+
+                    <tr>
+                        <td class="pos">05</td>
+                        <td class="driver">
+                            <div class="driver-info">
+                                <img src="images/user.png">
+                                <div>
+                                    <strong>SERGIO PEREZ</strong>
+                                    <small>RED BULL RACING</small>
+                                </div>
+                            </div>
+                        </td>
+                        <td>MEX</td>
+                        <td class="team rb">RB20</td>
+                        <td>0</td>
+                        <td>4</td>
+                        <td class="points">111</td>
+                    </tr>
+
+                </tbody>
+            </table>
+        </section>
+
+        <!-- CARDS -->
+        <section class="bottom-cards">
+
+            <div class="card stat-card">
+                <div class="card-top">
+                    <span class="icon-box">↗</span>
+                    <h4>FASTEST LAP</h4>
+                </div>
+
+                <p>MAX VERSTAPPEN</p>
+                <small>1:16.330 - SPANISH GP</small>
+            </div>
+
+            <div class="card stat-card">
+                <div class="card-top">
+                    <span class="icon-box">🎟</span>
+                    <h4>NEXT TICKET SALE</h4>
+                </div>
+
+                <p>BELGIAN GP</p>
+                <small>STARTS IN 2 DAYS</small>
+            </div>
+
+            <div class="card highlight">
+                <div class="card-top">
+                    <span class="icon-box white">🔔</span>
+                    <h4>TRACK ALERTS</h4>
+                </div>
+
+                <small class="alert-text">
+                    Never miss a race. Get live qualifying results
+                    and podium alerts directly to your inbox.
+                </small>
+
+                <button>NOTIFY ME</button>
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <div class="footer-left">
+            © 2024 F1 TRACKER ENTHUSIASTS. ALL RIGHTS RESERVED.
+        </div>
+
+        <div class="footer-right">
+            <a href="#">PRIVACY</a>
+            <a href="#">TERMS</a>
+            <a href="#">MEDIA KIT</a>
+        </div>
+    </footer>
+
 </div>
 </body>
 </html>
