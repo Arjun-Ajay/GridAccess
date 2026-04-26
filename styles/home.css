@@ -299,7 +299,7 @@ footer a {
     .video-overlay {
         width: 95vw;
         height: 65vh;
-        padding-top: 8rem;
+        padding-top: 5rem;
         padding-left: 1.5rem;
         padding-right: 1.5rem;
     }
@@ -314,7 +314,7 @@ footer a {
     }
 
     .race-title h1 {
-        font-size: 1.8rem;
+        font-size: 5.5rem;
     }
 
     .clock {
