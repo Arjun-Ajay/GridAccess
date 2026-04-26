@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/common_styles.css">
+    <link rel="stylesheet" href="styles/user.css">
+    <script src="scripts/user.js" defer></script>
+
+    <title>GridAccess - Sign In</title>
+</head>
+
+<body>
+    <div class="layout">
+        <header>
+            <div class="logo">
+                <img src="images/mainlogo.png" alt="LOGO">
+                <H1>GRID ACCESS</H1>
+            </div>
+            <ul class="navigation">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="calender.html">Race Calender</a></li>
+                <li><a href="tickets.html">Tickets</a></li>
+                <li><a href="standings.html">Standings</a></li>
+            </ul>
+            <div class="profile">
+                <a href="user.html"><img src="images/user.png" alt="PROFILE_Pic"></a>
+            </div>
+        </header>
+
+        <main class="main-content">
+            <div class="auth-container">
+
+                <div class="auth-sidebar">
+                    <div class="sidebar-content">
+                        <h1>GRID<br><span>ACCESS</span></h1>
+                        <p>Your paddock pass to the world of Formula 1. Track races, grab tickets, and never miss a
+                            moment.</p>
+                        <div class="sidebar-stats">
+                            <div class="stat">
+                                <span class="stat-number">22</span>
+                                <span class="stat-label">RACES</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-number">10</span>
+                                <span class="stat-label">TEAMS</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-number">20</span>
+                                <span class="stat-label">DRIVERS</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="auth-forms">
+
+                    <div class="form-toggle">
+                        <button class="toggle-btn active" id="toggle-login">SIGN IN</button>
+                        <button class="toggle-btn" id="toggle-signup">SIGN UP</button>
+                    </div>
+
+                    <form class="auth-form" id="login-form">
+                        <h2>Welcome Back</h2>
+                        <p class="form-subtitle">Sign in to access your race dashboard</p>
+
+                        <div class="input-group">
+                            <label for="login-email">EMAIL</label>
+                            <input type="email" id="login-email" name="email" placeholder="you@example.com" required>
+                        </div>
+
+                        <div class="input-group">
+                            <label for="login-password">PASSWORD</label>
+                            <input type="password" id="login-password" name="password" placeholder="Enter your password"
+                                required>
+                        </div>
+
+                        <div class="form-options">
+                            <label class="checkbox-label">
+                                <input type="checkbox" id="remember-me" name="remember">
+                                <span>Remember me</span>
+                            </label>
+                            <a href="#" class="forgot-link">Forgot password?</a>
+                        </div>
+
+                        <button type="submit" class="btn-submit">SIGN IN</button>
+
+                        <div class="divider">
+                            <span>OR</span>
+                        </div>
+
+                        <button type="button" class="btn-social btn-google">
+                            <img src="images/google.png" alt="GoogleLOGO">
+                            Continue with Google
+                        </button>
+
+                        <p class="switch-text">Don't have an account? <a href="#" id="go-to-signup">Sign up</a></p>
+                    </form>
+
+                    <form class="auth-form hidden" id="signup-form">
+                        <h2>Join the Grid</h2>
+                        <p class="form-subtitle">Create your account and start your F1 journey</p>
+
+                        <div class="name-row">
+                            <div class="input-group">
+                                <label for="signup-firstname">FIRST NAME</label>
+                                <input type="text" id="signup-firstname" name="firstname" placeholder="First name"
+                                    required>
+                            </div>
+                            <div class="input-group">
+                                <label for="signup-lastname">LAST NAME</label>
+                                <input type="text" id="signup-lastname" name="lastname" placeholder="Last name"
+                                    required>
+                            </div>
+                        </div>
+
+                        <div class="input-group">
+                            <label for="signup-email">EMAIL</label>
+                            <input type="email" id="signup-email" name="email" placeholder="you@example.com" required>
+                        </div>
+
+                        <div class="input-group">
+                            <label for="signup-password">PASSWORD</label>
+                            <input type="password" id="signup-password" name="password"
+                                placeholder="Create a password (min 8 characters)" minlength="8" required>
+                        </div>
+
+                        <div class="input-group">
+                            <label for="signup-confirm">CONFIRM PASSWORD</label>
+                            <input type="password" id="signup-confirm" name="confirm" placeholder="Re-enter password"
+                                required>
+                        </div>
+
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="agree-terms" name="terms" required>
+                            <span>I agree to the <a href="#">Terms of Service</a> and <a href="#">Privacy
+                                    Policy</a></span>
+                        </label>
+
+                        <button type="submit" class="btn-submit">CREATE ACCOUNT</button>
+
+                        <p class="switch-text">Already have an account? <a href="#" id="go-to-login">Sign in</a></p>
+                    </form>
+
+                </div>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <h4>This page has been designed by <a href="https://arjun-ajay.github.io/MyPortfolio/" target="_blank">Arjun
+                    Ajay</a></h4>
+            <h4>GridAccess - The Ultimate destination for every F1 fan</h4>
+            <h4>All rights reserved</h4>
+        </footer>
+    </div>
+</body>
+
+</html>
