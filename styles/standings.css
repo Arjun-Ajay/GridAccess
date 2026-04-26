@@ -96,7 +96,7 @@
 }
 
 .main-content th{
-    padding:18px 20px;
+    padding:18px 24px;
     font-size:11px;
     color:#8c8c8c;
     text-transform:uppercase;
@@ -104,9 +104,10 @@
 }
 
 .main-content td{
-    padding:20px;
+    padding:24px;
     vertical-align:middle;
     white-space:nowrap;
+    font-size:14px;
 }
 
 .main-content th:nth-child(1),
@@ -116,17 +117,17 @@
 
 .main-content th:nth-child(2),
 .main-content td:nth-child(2){
-    width:340px;
+    width:420px;
 }
 
 .main-content th:nth-child(3),
 .main-content td:nth-child(3){
-    width:110px;
+    width:120px;
 }
 
 .main-content th:nth-child(4),
 .main-content td:nth-child(4){
-    width:150px;
+    width:140px;
 }
 
 .main-content th:nth-child(5),
@@ -164,25 +165,20 @@
 .main-content .driver-info{
     display:flex;
     align-items:center;
-    gap:12px;
-}
-
-.main-content .driver img{
-    width:40px;
-    height:40px;
-    border-radius:50%;
-    border:2px solid #ff1e2d;
-    padding:2px;
 }
 
 .main-content .driver-info strong{
     display:block;
-    font-size:13px;
+    font-size:14px;
+    line-height:1.2;
 }
 
 .main-content .driver-info small{
-    font-size:10px;
+    display:block;
+    margin-top:4px;
+    font-size:11px;
     color:#999;
+    letter-spacing:0.5px;
 }
 
 .main-content .team{
@@ -193,8 +189,8 @@
     content:"";
     position:absolute;
     left:0;
-    bottom:-7px;
-    width:46px;
+    bottom:-8px;
+    width:54px;
     height:2px;
 }
 

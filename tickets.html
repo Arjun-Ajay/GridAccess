@@ -1,32 +1,271 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles/common_styles.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    
-    <title>GridAccess - Tickets</title>
+<link rel="stylesheet" href="styles/common_styles.css">
+<link rel="stylesheet" href="styles/tickets.css">
+
+<title>GridAccess - Tickets</title>
 </head>
+
 <body>
 <div class="layout">
-    <header>
-        <div class="logo">
-            <img src="images/mainlogo.png" alt="LOGO"><H1>GRID ACCESS</H1>
-        </div>
-        <ul class="navigation">
-                <li><a href="home.html">Home</a></li>
-                <li><a href="calender.html">Race Calender</a></li>
-                <li><a id="activeTab" href="tickets.html">Tickets</a></li>
-                <li><a href="standings.html">Standings</a></li>
-        </ul>
-        <div class="profile">
-            <img src="images/user.png" alt="PROFILE_Pic">
-        </div>
 
-    </header>
-    <main class="main-content">Body Content</main>
-    <footer class="footer">Footer Content</footer>
+<header>
+    <div class="logo">
+        <img src="images/mainlogo.png" alt="LOGO">
+        <h1>GRID ACCESS</h1>
+    </div>
+
+    <ul class="navigation">
+        <li><a href="home.html">Home</a></li>
+        <li><a href="calender.html">Race Calender</a></li>
+        <li><a id="activeTab" href="tickets.html">Tickets</a></li>
+        <li><a href="standings.html">Standings</a></li>
+    </ul>
+
+    <div class="profile">
+        <img src="images/user.png" alt="PROFILE_Pic">
+    </div>
+</header>
+
+<main class="main-content">
+
+<section class="tickets-hero">
+    <h1>Grand Prix Tickets 2026</h1>
+    <p>
+        Book seats for upcoming races, revisit completed weekends,
+        and stay updated on the next Grand Prix across the season.
+    </p>
+</section>
+
+<section class="ticket-wrapper">
+
+<!-- COMPLETED -->
+
+<div class="ticket-card completed">
+<div class="ticket-image"></div>
+<div class="ticket-info">
+<span class="ticket-date completed-badge">COMPLETED</span>
+<h2>Australian Grand Prix</h2>
+<p>Melbourne, Australia • Mar 16</p>
+<div class="ticket-bottom">
+<button class="secondary-btn">View Results</button>
+</div>
+</div>
+</div>
+
+<div class="ticket-card completed">
+<div class="ticket-image"></div>
+<div class="ticket-info">
+<span class="ticket-date completed-badge">COMPLETED</span>
+<h2>Chinese Grand Prix</h2>
+<p>Shanghai, China • Mar 23</p>
+<div class="ticket-bottom">
+<button class="secondary-btn">View Results</button>
+</div>
+</div>
+</div>
+
+<div class="ticket-card completed">
+<div class="ticket-image"></div>
+<div class="ticket-info">
+<span class="ticket-date completed-badge">COMPLETED</span>
+<h2>Japanese Grand Prix</h2>
+<p>Suzuka, Japan • Apr 06</p>
+<div class="ticket-bottom">
+<button class="secondary-btn">View Results</button>
+</div>
+</div>
+</div>
+
+<!-- NEXT RACE -->
+
+<div class="ticket-card next-race">
+<div class="ticket-image"></div>
+<div class="ticket-info">
+<span class="ticket-date live-badge">NEXT RACE</span>
+<h2>Miami Grand Prix</h2>
+<p>Miami, United States • May 04</p>
+<div class="ticket-bottom">
+<div>
+<small>STARTING FROM</small>
+<h3>$349.00</h3>
+</div>
+<button>Book Now →</button>
+</div>
+</div>
+</div>
+
+<!-- UPCOMING -->
+
+<div class="ticket-card">
+<div class="ticket-image"></div>
+<div class="ticket-info">
+<span class="ticket-date">JUN 15</span>
+<h2>Canadian Grand Prix</h2>
+<p>Montreal, Canada</p>
+<div class="ticket-bottom">
+<button>Notify Me</button>
+</div>
+</div>
+</div>
+
+<div class="ticket-card">
+<div class="ticket-image"></div>
+<div class="ticket-info">
+<span class="ticket-date">JUN 29</span>
+<h2>Monaco Grand Prix</h2>
+<p>Monte Carlo, Monaco</p>
+<div class="ticket-bottom">
+<button>Notify Me</button>
+</div>
+</div>
+</div>
+
+<div class="ticket-card">
+<div class="ticket-image"></div>
+<div class="ticket-info">
+<span class="ticket-date">JUL 06</span>
+<h2>Barcelona Grand Prix</h2>
+<p>Barcelona, Spain</p>
+<div class="ticket-bottom">
+<button>Notify Me</button>
+</div>
+</div>
+</div>
+
+<div class="ticket-card">
+<div class="ticket-image"></div>
+<div class="ticket-info">
+<span class="ticket-date">JUL 13</span>
+<h2>Austrian Grand Prix</h2>
+<p>Spielberg, Austria</p>
+<div class="ticket-bottom">
+<button>Notify Me</button>
+</div>
+</div>
+</div>
+
+<div class="ticket-card">
+<div class="ticket-image"></div>
+<div class="ticket-info">
+<span class="ticket-date">JUL 27</span>
+<h2>British Grand Prix</h2>
+<p>Silverstone, Great Britain</p>
+<div class="ticket-bottom">
+<button>Notify Me</button>
+</div>
+</div>
+</div>
+
+<div class="ticket-card">
+<div class="ticket-image"></div>
+<div class="ticket-info">
+<span class="ticket-date">AUG 03</span>
+<h2>Belgian Grand Prix</h2>
+<p>Spa-Francorchamps, Belgium</p>
+<div class="ticket-bottom">
+<button>Notify Me</button>
+</div>
+</div>
+</div>
+
+<div class="ticket-card">
+<div class="ticket-image"></div>
+<div class="ticket-info">
+<span class="ticket-date">AUG 17</span>
+<h2>Hungarian Grand Prix</h2>
+<p>Budapest, Hungary</p>
+<div class="ticket-bottom">
+<button>Notify Me</button>
+</div>
+</div>
+</div>
+
+<div class="ticket-card">
+<div class="ticket-image"></div>
+<div class="ticket-info">
+<span class="ticket-date">SEP 07</span>
+<h2>Italian Grand Prix</h2>
+<p>Monza, Italy</p>
+<div class="ticket-bottom">
+<button>Notify Me</button>
+</div>
+</div>
+</div>
+
+<div class="ticket-card">
+<div class="ticket-image"></div>
+<div class="ticket-info">
+<span class="ticket-date">OCT 19</span>
+<h2>Singapore Grand Prix</h2>
+<p>Marina Bay, Singapore</p>
+<div class="ticket-bottom">
+<button>Notify Me</button>
+</div>
+</div>
+</div>
+
+<div class="ticket-card">
+<div class="ticket-image"></div>
+<div class="ticket-info">
+<span class="ticket-date">OCT 26</span>
+<h2>United States Grand Prix</h2>
+<p>Austin, United States</p>
+<div class="ticket-bottom">
+<button>Notify Me</button>
+</div>
+</div>
+</div>
+
+<div class="ticket-card">
+<div class="ticket-image"></div>
+<div class="ticket-info">
+<span class="ticket-date">NOV 22</span>
+<h2>Las Vegas Grand Prix</h2>
+<p>Las Vegas, United States</p>
+<div class="ticket-bottom">
+<button>Notify Me</button>
+</div>
+</div>
+</div>
+
+<div class="ticket-card">
+<div class="ticket-image"></div>
+<div class="ticket-info">
+<span class="ticket-date">DEC 07</span>
+<h2>Abu Dhabi Grand Prix</h2>
+<p>Yas Marina, Abu Dhabi</p>
+<div class="ticket-bottom">
+<button>Notify Me</button>
+</div>
+</div>
+</div>
+
+</section>
+
+<section class="tickets-cta">
+<h2>Don't Miss The Finale</h2>
+<p>
+Abu Dhabi decides champions. Be there live for the final race weekend.
+</p>
+<button>VIEW SEASON FINALE</button>
+</section>
+
+</main>
+
+<footer class="footer">
+<div>© 2026 GRID ACCESS</div>
+<div class="footer-links">
+<a href="#">Terms</a>
+<a href="#">Privacy</a>
+<a href="#">Support</a>
+</div>
+</footer>
+
 </div>
 </body>
 </html>
