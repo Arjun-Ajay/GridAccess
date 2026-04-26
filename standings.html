@@ -1,6 +1,7 @@
 <!-- standings.html -->
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,7 +9,8 @@
     <!-- GOOGLE FONT FOR HERO PARAGRAPH -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
 
     <!-- COMMON STYLES -->
     <link rel="stylesheet" href="styles/common_styles.css">
@@ -20,228 +22,228 @@
 </head>
 
 <body>
-<div class="layout">
+    <div class="layout">
 
-    <!-- HEADER -->
-    <header>
-        <div class="logo">
-            <img src="images/mainlogo.png">
-            <h1>GRID ACCESS</h1>
-        </div>
+        <!-- HEADER -->
+        <header>
+            <div class="logo">
+                <img src="images/mainlogo.png">
+                <h1>GRID ACCESS</h1>
+            </div>
 
-        <ul class="navigation">
-            <li><a href="home.html">Home</a></li>
-            <li><a href="calender.html">Race Calender</a></li>
-            <li><a href="tickets.html">Tickets</a></li>
-            <li><a id="activeTab" href="standings.html">Standings</a></li>
-        </ul>
+            <ul class="navigation">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="calender.html">Race Calender</a></li>
+                <li><a href="tickets.html">Tickets</a></li>
+                <li><a id="activeTab" href="standings.html">Standings</a></li>
+            </ul>
 
-        <div class="profile">
-            <img src="images/user.png">
-        </div>
-    </header>
+            <div class="profile">
+                <a href="user.html"><img src="images/user.png" alt="PROFILE_Pic"></a>
+            </div>
+        </header>
 
-    <!-- MAIN -->
-    <main class="main-content">
+        <!-- MAIN -->
+        <main class="main-content">
 
-        <!-- HERO -->
-        <div class="hero-bg">
+            <!-- HERO -->
+            <div class="hero-bg">
 
-            <section class="hero">
-                <div class="hero-left">
-                    <h1>CHAMPIONSHIP</h1>
-                    <h2>STANDINGS</h2>
-                    <br>
+                <section class="hero">
+                    <div class="hero-left">
+                        <h1>CHAMPIONSHIP</h1>
+                        <h2>STANDINGS</h2>
+                        <br>
 
-                    <p style="font-family:'Poppins', sans-serif; font-weight:400; line-height:1.7;">
-                        Live updates from the 2024 FIA Formula One World Championship.
-                        Track every point, win, and podium in the race for the title.
-                    </p>
-                </div>
+                        <p style="font-family:'Poppins', sans-serif; font-weight:400; line-height:1.7;">
+                            Live updates from the 2024 FIA Formula One World Championship.
+                            Track every point, win, and podium in the race for the title.
+                        </p>
+                    </div>
 
-                <div class="next-race">
-                    <span>NEXT RACE</span>
-                    <h3>BRITISH GRAND PRIX</h3>
-                    <div class="timer">04:12:45</div>
-                </div>
+                    <div class="next-race">
+                        <span>NEXT RACE</span>
+                        <h3>BRITISH GRAND PRIX</h3>
+                        <div class="timer">04:12:45</div>
+                    </div>
+                </section>
+
+                <section class="tabs">
+                    <button class="active">Driver Standings</button>
+                    <button>Constructor Standings</button>
+                </section>
+
+            </div>
+
+            <!-- TABLE -->
+            <section class="standings-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>POS</th>
+                            <th>DRIVER</th>
+                            <th>NATIONALITY</th>
+                            <th>TEAM</th>
+                            <th>WINS</th>
+                            <th>PODIUMS</th>
+                            <th>POINTS</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+
+                        <tr>
+                            <td class="pos">01</td>
+                            <td class="driver">
+                                <div class="driver-info">
+                                    <div>
+                                        <strong>MAX VERSTAPPEN</strong>
+                                        <small>RED BULL RACING</small>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>NED</td>
+                            <td class="team rb">RB20</td>
+                            <td>7</td>
+                            <td>9</td>
+                            <td class="points">219</td>
+                        </tr>
+
+                        <tr>
+                            <td class="pos">02</td>
+                            <td class="driver">
+                                <div class="driver-info">
+                                    <div>
+                                        <strong>LANDO NORRIS</strong>
+                                        <small>MCLAREN</small>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>GBR</td>
+                            <td class="team mcl">MCL38</td>
+                            <td>1</td>
+                            <td>6</td>
+                            <td class="points">150</td>
+                        </tr>
+
+                        <tr>
+                            <td class="pos">03</td>
+                            <td class="driver">
+                                <div class="driver-info">
+                                    <div>
+                                        <strong>CHARLES LECLERC</strong>
+                                        <small>FERRARI</small>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>MON</td>
+                            <td class="team fer">SF-24</td>
+                            <td>1</td>
+                            <td>5</td>
+                            <td class="points">148</td>
+                        </tr>
+
+                        <tr>
+                            <td class="pos">04</td>
+                            <td class="driver">
+                                <div class="driver-info">
+                                    <div>
+                                        <strong>CARLOS SAINZ</strong>
+                                        <small>FERRARI</small>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>ESP</td>
+                            <td class="team fer">SF-24</td>
+                            <td>1</td>
+                            <td>4</td>
+                            <td class="points">116</td>
+                        </tr>
+
+                        <tr>
+                            <td class="pos">05</td>
+                            <td class="driver">
+                                <div class="driver-info">
+                                    <div>
+                                        <strong>SERGIO PEREZ</strong>
+                                        <small>RED BULL RACING</small>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>MEX</td>
+                            <td class="team rb">RB20</td>
+                            <td>0</td>
+                            <td>4</td>
+                            <td class="points">111</td>
+                        </tr>
+
+                    </tbody>
+                </table>
             </section>
 
-            <section class="tabs">
-                <button class="active">Driver Standings</button>
-                <button>Constructor Standings</button>
+            <!-- CARDS -->
+            <section class="bottom-cards">
+
+                <div class="card stat-card">
+                    <div class="card-top">
+                        <span class="icon-box">↗</span>
+                        <h4>FASTEST LAP</h4>
+                    </div>
+
+                    <p>MAX VERSTAPPEN</p>
+                    <small>1:16.330 - SPANISH GP</small>
+                </div>
+
+                <div class="card stat-card">
+                    <div class="card-top">
+                        <span class="icon-box">🎟</span>
+                        <h4>NEXT TICKET SALE</h4>
+                    </div>
+
+                    <p>BELGIAN GP</p>
+                    <small>STARTS IN 2 DAYS</small>
+                </div>
+
+                <div class="card highlight">
+                    <div class="card-top">
+                        <span class="icon-box white">🔔</span>
+                        <h4>TRACK ALERTS</h4>
+                    </div>
+
+                    <small class="alert-text">
+                        Never miss a race. Get live qualifying results
+                        and podium alerts directly to your inbox.
+                    </small>
+
+                    <button>NOTIFY ME</button>
+                </div>
+
             </section>
 
-        </div>
+        </main>
 
-        <!-- TABLE -->
-        <section class="standings-table">
-            <table>
-                <thead>
-                    <tr>
-                        <th>POS</th>
-                        <th>DRIVER</th>
-                        <th>NATIONALITY</th>
-                        <th>TEAM</th>
-                        <th>WINS</th>
-                        <th>PODIUMS</th>
-                        <th>POINTS</th>
-                    </tr>
-                </thead>
 
-                <tbody>
+        <footer class="footer">
 
-                    <tr>
-                        <td class="pos">01</td>
-                        <td class="driver">
-                            <div class="driver-info">
-                                <div>
-                                    <strong>MAX VERSTAPPEN</strong>
-                                    <small>RED BULL RACING</small>
-                                </div>
-                            </div>
-                        </td>
-                        <td>NED</td>
-                        <td class="team rb">RB20</td>
-                        <td>7</td>
-                        <td>9</td>
-                        <td class="points">219</td>
-                    </tr>
+            <h4>
+                This page has been designed by
+                <a href="https://giri-31.github.io/HTML-LAB-ASSIGNMENT/" target="_blank"
+                    style="color:#ffffff; text-decoration:none; font-weight:600;">
+                    R.GIRINDRA
+                </a>
+            </h4>
 
-                    <tr>
-                        <td class="pos">02</td>
-                        <td class="driver">
-                            <div class="driver-info">
-                                <div>
-                                    <strong>LANDO NORRIS</strong>
-                                    <small>MCLAREN</small>
-                                </div>
-                            </div>
-                        </td>
-                        <td>GBR</td>
-                        <td class="team mcl">MCL38</td>
-                        <td>1</td>
-                        <td>6</td>
-                        <td class="points">150</td>
-                    </tr>
+            <h4>
+                GridAccess - The Ultimate destination for every F1 fan
+            </h4>
 
-                    <tr>
-                        <td class="pos">03</td>
-                        <td class="driver">
-                            <div class="driver-info">
-                                <div>
-                                    <strong>CHARLES LECLERC</strong>
-                                    <small>FERRARI</small>
-                                </div>
-                            </div>
-                        </td>
-                        <td>MON</td>
-                        <td class="team fer">SF-24</td>
-                        <td>1</td>
-                        <td>5</td>
-                        <td class="points">148</td>
-                    </tr>
+            <h4>
+                All rights reserved
+            </h4>
 
-                    <tr>
-                        <td class="pos">04</td>
-                        <td class="driver">
-                            <div class="driver-info">
-                                <div>
-                                    <strong>CARLOS SAINZ</strong>
-                                    <small>FERRARI</small>
-                                </div>
-                            </div>
-                        </td>
-                        <td>ESP</td>
-                        <td class="team fer">SF-24</td>
-                        <td>1</td>
-                        <td>4</td>
-                        <td class="points">116</td>
-                    </tr>
+        </footer>
 
-                    <tr>
-                        <td class="pos">05</td>
-                        <td class="driver">
-                            <div class="driver-info">
-                                <div>
-                                    <strong>SERGIO PEREZ</strong>
-                                    <small>RED BULL RACING</small>
-                                </div>
-                            </div>
-                        </td>
-                        <td>MEX</td>
-                        <td class="team rb">RB20</td>
-                        <td>0</td>
-                        <td>4</td>
-                        <td class="points">111</td>
-                    </tr>
-
-                </tbody>
-            </table>
-        </section>
-
-        <!-- CARDS -->
-        <section class="bottom-cards">
-
-            <div class="card stat-card">
-                <div class="card-top">
-                    <span class="icon-box">↗</span>
-                    <h4>FASTEST LAP</h4>
-                </div>
-
-                <p>MAX VERSTAPPEN</p>
-                <small>1:16.330 - SPANISH GP</small>
-            </div>
-
-            <div class="card stat-card">
-                <div class="card-top">
-                    <span class="icon-box">🎟</span>
-                    <h4>NEXT TICKET SALE</h4>
-                </div>
-
-                <p>BELGIAN GP</p>
-                <small>STARTS IN 2 DAYS</small>
-            </div>
-
-            <div class="card highlight">
-                <div class="card-top">
-                    <span class="icon-box white">🔔</span>
-                    <h4>TRACK ALERTS</h4>
-                </div>
-
-                <small class="alert-text">
-                    Never miss a race. Get live qualifying results
-                    and podium alerts directly to your inbox.
-                </small>
-
-                <button>NOTIFY ME</button>
-            </div>
-
-        </section>
-
-    </main>
-
-    
-<footer class="footer">
-
-    <h4>
-        This page has been designed by
-        <a href="https://giri-31.github.io/HTML-LAB-ASSIGNMENT/"
-   target="_blank"
-   style="color:#ffffff; text-decoration:none; font-weight:600;">
-   R.GIRINDRA
-</a>
-    </h4>
-
-    <h4>
-        GridAccess - The Ultimate destination for every F1 fan
-    </h4>
-
-    <h4>
-        All rights reserved
-    </h4>
-
-</footer>
-
-</div>
+    </div>
 </body>
+
 </html>
