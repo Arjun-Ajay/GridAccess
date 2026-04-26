@@ -1,0 +1,310 @@
+:root {
+    --clr1: white;
+    --clr2: grey;
+    --lightgrey: #332e2f;
+    --DeepRed: #ef0d32;
+    --LightRed: #f20d33;
+    --grad0: #231013;
+    --grad100: #221013;
+    --fadedRed: #2d1c1f;
+    --cardBg: #1a1315;
+    --cardBorder: #2a2224;
+    --nextRaceBg: #1c0f12;
+    --nextRaceBorder: #ef0d3240;
+}
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 4rem 6rem;
+}
+
+.calender-main {
+    margin-bottom: 3rem;
+}
+
+.calender-main #section-heading {
+    display: flex;
+    justify-content: flex-start;
+    border-left: 2px solid var(--DeepRed);
+    padding: 1rem;
+    font-style: italic;
+    font-size: 4rem;
+    letter-spacing: 2px;
+}
+
+.calender-subtitle {
+    font-size: 1.6rem;
+    color: var(--clr2);
+    max-width: 60rem;
+    line-height: 1.7;
+    margin-top: 1.5rem;
+    padding-left: 1rem;
+}
+
+.tab-btn {
+    background: transparent;
+    color: var(--clr2);
+    font-size: 1.4rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    padding: 1.2rem 2.5rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.tab-btn:hover {
+    color: var(--clr1);
+}
+
+.tab-btn.active {
+    color: var(--DeepRed);
+}
+
+.race-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    width: 100%;
+    margin-bottom: 4rem;
+}
+
+.race-card {
+    display: flex;
+    align-items: center;
+    background: var(--cardBg);
+    border: 1px solid var(--cardBorder);
+    border-radius: 12px;
+    padding: 2.5rem 3rem;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.race-card::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 20rem;
+    height: 100%;
+    background: linear-gradient(135deg, transparent 40%, rgba(239, 13, 50, 0.03) 100%);
+    pointer-events: none;
+}
+
+.race-card:hover {
+    border-color: var(--DeepRed);
+    box-shadow: 0 0 20px rgba(239, 13, 50, 0.1);
+    transform: translateX(4px);
+}
+
+.race-card.next-race {
+    background: var(--nextRaceBg);
+    border: 1px solid var(--nextRaceBorder);
+    box-shadow: 0 0 25px rgba(239, 13, 50, 0.08);
+}
+
+.race-card.next-race::after {
+    background: linear-gradient(135deg, transparent 30%, rgba(239, 13, 50, 0.07) 100%);
+}
+
+.race-round {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 10rem;
+    padding-right: 3rem;
+    border-right: 1px solid var(--cardBorder);
+    margin-right: 3rem;
+}
+
+.round-label {
+    font-size: 1.1rem;
+    font-weight: 700;
+    letter-spacing: 3px;
+    color: var(--DeepRed);
+    margin-bottom: 0.2rem;
+}
+
+.round-number {
+    font-size: 4.5rem;
+    font-weight: 800;
+    color: var(--clr1);
+    line-height: 1;
+    font-style: italic;
+}
+
+.race-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.race-status-date {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.race-date {
+    font-size: 1.3rem;
+    color: var(--clr2);
+    font-weight: 400;
+}
+
+.race-name {
+    font-size: 2.4rem;
+    font-weight: 600;
+    color: var(--clr1);
+    letter-spacing: 0.5px;
+}
+
+.race-location {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    color: var(--clr2);
+    font-size: 1.3rem;
+}
+
+.race-location img {
+    width: 1.4rem;
+    height: 1.4rem;
+    opacity: 0.7;
+}
+
+.status-badge {
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    padding: 0.3rem 1rem;
+    border-radius: 4px;
+}
+
+.badge-completed {
+    color: var(--clr2);
+    background: rgba(128, 128, 128, 0.15);
+    border: 1px solid rgba(128, 128, 128, 0.3);
+}
+
+.badge-next {
+    color: var(--clr1);
+    background: var(--DeepRed);
+    padding: 0.4rem 1.2rem;
+}
+
+.race-actions {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+    z-index: 1;
+}
+
+.btn-results {
+    color: var(--clr1);
+    background: var(--lightgrey);
+    border: 1px solid var(--cardBorder);
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    font-size: 1.3rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.btn-results:hover {
+    background: var(--fadedRed);
+    border-color: var(--DeepRed);
+}
+
+.btn-info {
+    width: 3.5rem;
+    height: 3.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--cardBorder);
+    border-radius: 50%;
+    color: var(--clr2);
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.btn-info:hover {
+    border-color: var(--clr2);
+    color: var(--clr1);
+}
+
+.btn-tickets {
+    color: var(--clr1);
+    background: var(--DeepRed);
+    padding: 1rem 2.5rem;
+    border-radius: 8px;
+    font-size: 1.3rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.btn-tickets:hover {
+    box-shadow: 0 0 15px rgba(239, 13, 50, 0.5);
+    transform: scale(1.03);
+}
+
+.btn-details {
+    color: var(--clr1);
+    background: transparent;
+    border: 1px solid var(--cardBorder);
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    font-size: 1.3rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.btn-details:hover {
+    border-color: var(--clr2);
+    background: var(--lightgrey);
+}
+
+.btn-notify {
+    color: var(--clr1);
+    background: var(--lightgrey);
+    border: 1px solid var(--cardBorder);
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    font-size: 1.3rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.btn-notify:hover {
+    background: var(--fadedRed);
+    border-color: var(--DeepRed);
+}
+
+footer {
+    color: var(--clr2);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer a {
+    color: var(--clr2);
+    border-bottom: 1px solid var(--clr2);
+}
