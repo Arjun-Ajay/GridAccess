@@ -54,13 +54,8 @@
     transition: all 0.3s ease;
 }
 
-.tab-btn:hover {
-    color: var(--clr1);
-}
-
-.tab-btn.active {
-    color: var(--DeepRed);
-}
+.tab-btn:hover { color: var(--clr1); }
+.tab-btn.active { color: var(--DeepRed); }
 
 .race-list {
     display: flex;
@@ -81,7 +76,6 @@
     position: relative;
     overflow: hidden;
 }
-
 
 .race-card:hover {
     border-color: var(--DeepRed);
@@ -109,171 +103,51 @@
     margin-right: 3rem;
 }
 
-.round-label {
-    font-size: 1.1rem;
-    font-weight: 700;
-    letter-spacing: 3px;
-    color: var(--DeepRed);
-    margin-bottom: 0.2rem;
-}
+.round-label { font-size: 1.1rem; font-weight: 700; letter-spacing: 3px; color: var(--DeepRed); margin-bottom: 0.2rem; }
+.round-number { font-size: 4.5rem; font-weight: 800; color: var(--clr1); line-height: 1; font-style: italic; }
 
-.round-number {
-    font-size: 4.5rem;
-    font-weight: 800;
-    color: var(--clr1);
-    line-height: 1;
-    font-style: italic;
-}
+.race-info { flex: 1; display: flex; flex-direction: column; gap: 0.5rem; }
+.race-status-date { display: flex; align-items: center; gap: 1rem; }
+.race-date { font-size: 1.3rem; color: var(--clr2); font-weight: 400; }
+.race-name { font-size: 2.4rem; font-weight: 600; color: var(--clr1); letter-spacing: 0.5px; }
+.race-location { display: flex; align-items: center; gap: 0.6rem; color: var(--clr2); font-size: 1.3rem; }
+.race-location img { width: 1.4rem; height: 1.4rem; opacity: 0.7; }
 
-.race-info {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-}
+.status-badge { font-size: 1rem; font-weight: 700; letter-spacing: 1.5px; padding: 0.3rem 1rem; border-radius: 4px; }
+.badge-completed { color: var(--clr2); background: rgba(128, 128, 128, 0.15); border: 1px solid rgba(128, 128, 128, 0.3); }
+.badge-next { color: var(--clr1); background: var(--DeepRed); padding: 0.4rem 1.2rem; }
 
-.race-status-date {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-}
+.race-actions { display: flex; align-items: center; gap: 1.2rem; z-index: 1; }
 
-.race-date {
-    font-size: 1.3rem;
-    color: var(--clr2);
-    font-weight: 400;
-}
+.btn-results { color: var(--clr1); background: var(--lightgrey); border: 1px solid var(--cardBorder); padding: 1rem 2rem; border-radius: 8px; font-size: 1.3rem; font-weight: 600; letter-spacing: 1px; cursor: pointer; transition: all 0.2s ease; }
+.btn-results:hover { background: var(--fadedRed); border-color: var(--DeepRed); }
 
-.race-name {
-    font-size: 2.4rem;
-    font-weight: 600;
-    color: var(--clr1);
-    letter-spacing: 0.5px;
-}
+.btn-info { width: 3.5rem; height: 3.5rem; display: flex; align-items: center; justify-content: center; border: 1px solid var(--cardBorder); border-radius: 50%; color: var(--clr2); font-size: 1.5rem; cursor: pointer; transition: all 0.2s ease; }
+.btn-info:hover { border-color: var(--clr2); color: var(--clr1); }
 
-.race-location {
-    display: flex;
-    align-items: center;
-    gap: 0.6rem;
-    color: var(--clr2);
-    font-size: 1.3rem;
-}
+.btn-tickets { color: var(--clr1); background: var(--DeepRed); padding: 1rem 2.5rem; border-radius: 8px; font-size: 1.3rem; font-weight: 700; letter-spacing: 1px; cursor: pointer; transition: all 0.2s ease; font-family: 'Montserrat', sans-serif; }
+.btn-tickets:hover { box-shadow: 0 0 15px rgba(239, 13, 50, 0.5); transform: scale(1.03); }
 
-.race-location img {
-    width: 1.4rem;
-    height: 1.4rem;
-    opacity: 0.7;
-}
+.btn-notify { color: var(--clr1); background: var(--lightgrey); border: 1px solid var(--cardBorder); padding: 1rem 2rem; border-radius: 8px; font-size: 1.3rem; font-weight: 600; letter-spacing: 1px; cursor: pointer; transition: all 0.2s ease; font-family: 'Montserrat', sans-serif; }
+.btn-notify:hover { background: var(--fadedRed); border-color: var(--DeepRed); }
 
-.status-badge {
-    font-size: 1rem;
-    font-weight: 700;
-    letter-spacing: 1.5px;
-    padding: 0.3rem 1rem;
-    border-radius: 4px;
-}
+footer { color: var(--clr2); display: flex; justify-content: space-between; align-items: center; }
+footer a { color: var(--clr1); border-bottom: 1px solid var(--clr2); }
 
-.badge-completed {
-    color: var(--clr2);
-    background: rgba(128, 128, 128, 0.15);
-    border: 1px solid rgba(128, 128, 128, 0.3);
-}
-
-.badge-next {
-    color: var(--clr1);
-    background: var(--DeepRed);
-    padding: 0.4rem 1.2rem;
-}
-
-.race-actions {
-    display: flex;
-    align-items: center;
-    gap: 1.2rem;
-    z-index: 1;
-}
-
-.btn-results {
-    color: var(--clr1);
-    background: var(--lightgrey);
-    border: 1px solid var(--cardBorder);
-    padding: 1rem 2rem;
-    border-radius: 8px;
-    font-size: 1.3rem;
-    font-weight: 600;
-    letter-spacing: 1px;
-    cursor: pointer;
-    transition: all 0.2s ease;
-}
-
-.btn-results:hover {
-    background: var(--fadedRed);
-    border-color: var(--DeepRed);
-}
-
-.btn-info {
-    width: 3.5rem;
-    height: 3.5rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: 1px solid var(--cardBorder);
-    border-radius: 50%;
-    color: var(--clr2);
-    font-size: 1.5rem;
-    cursor: pointer;
-    transition: all 0.2s ease;
-}
-
-.btn-info:hover {
-    border-color: var(--clr2);
-    color: var(--clr1);
-}
-
-.btn-tickets {
-    color: var(--clr1);
-    background: var(--DeepRed);
-    padding: 1rem 2.5rem;
-    border-radius: 8px;
-    font-size: 1.3rem;
-    font-weight: 700;
-    letter-spacing: 1px;
-    cursor: pointer;
-    transition: all 0.2s ease;
-    font-family: 'Montserrat', sans-serif;
-}
-
-.btn-tickets:hover {
-    box-shadow: 0 0 15px rgba(239, 13, 50, 0.5);
-    transform: scale(1.03);
-}
-
-.btn-notify {
-    color: var(--clr1);
-    background: var(--lightgrey);
-    border: 1px solid var(--cardBorder);
-    padding: 1rem 2rem;
-    border-radius: 8px;
-    font-size: 1.3rem;
-    font-weight: 600;
-    letter-spacing: 1px;
-    cursor: pointer;
-    transition: all 0.2s ease;
-    font-family: 'Montserrat', sans-serif;
-}
-
-.btn-notify:hover {
-    background: var(--fadedRed);
-    border-color: var(--DeepRed);
-}
-
-footer {
-    color: var(--clr2);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-footer a {
-    color: var(--clr1);
-    border-bottom: 1px solid var(--clr2);
+@media (max-width: 480px) {
+    .main-content { padding: 2rem 1.5rem; }
+    .calender-main #section-heading { font-size: 2.4rem; letter-spacing: 1px; }
+    .calender-subtitle { font-size: 1.3rem; }
+    .tab-btn { font-size: 1.2rem; padding: 1rem 1.5rem; }
+    .race-card { flex-direction: column; align-items: flex-start; padding: 2rem 1.5rem; gap: 1.5rem; }
+    .race-card:hover { transform: none; }
+    .race-round { flex-direction: row; gap: 1rem; min-width: auto; padding-right: 0; border-right: none; margin-right: 0; padding-bottom: 1rem; border-bottom: 1px solid var(--cardBorder); width: 100%; }
+    .round-number { font-size: 3rem; }
+    .round-label { font-size: 1rem; }
+    .race-name { font-size: 1.8rem; }
+    .race-date { font-size: 1.2rem; }
+    .race-location { font-size: 1.2rem; }
+    .race-actions { flex-direction: column; width: 100%; gap: 0.8rem; }
+    .btn-tickets, .btn-notify, .btn-results { width: 100%; text-align: center; font-size: 1.2rem; padding: 1rem; }
+    footer { flex-direction: column; gap: 0.5rem; text-align: center; }
 }

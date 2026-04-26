@@ -288,112 +288,145 @@ footer a {
     }
 }
 
-@media (max-width: 1200px) {
-    .main-content .clock {
-        display: none;
-    }
-
-    .main-content .buttons {
-        display: block;
-    }
-
-    .race-title {
-        font-size: 2.8rem;
-    }
-
-    .video-overlay {
-        padding-top: 3rem;
-        padding-left: 4rem;
-    }
-}
-
-@media (max-width: 768px) {
-    video {
-        width: 90vw;
-        height: 40vh;
-    }
-
-    .video-overlay {
-        width: 85vw;
-        height: 38vh;
-        padding-top: 2rem;
-        padding-left: 3rem;
-    }
-
-    .race-title {
-        font-size: 2rem;
-    }
-
-    .buttons {
-        width: auto;
-        padding: 0.2rem 0.5rem;
-        font-size: 1rem;
-    }
-
-    .section-two {
-        margin-left: 2rem;
-        margin-right: 2rem;
-        width: auto;
-    }
-
-    .section-three {
-        flex-direction: column;
-        margin-left: 2rem;
-        margin-right: 2rem;
-        width: auto;
-    }
-
-    .news-cards {
-        width: 100%;
-    }
-
-    .news-cards img {
-        width: 100%;
-        height: 20rem;
-    }
-}
-
 @media (max-width: 480px) {
+
     video {
         width: 95vw;
-        height: 30vh;
+        height: 65vh;
+        border-radius: 8px;
     }
 
     .video-overlay {
-        width: 90vw;
+        width: 95vw;
+        height: 65vh;
+        padding-top: 8rem;
         padding-left: 1.5rem;
-        padding-top: 1rem;
+        padding-right: 1.5rem;
+    }
+
+    .nextrace-info {
+        gap: 1.5rem;
     }
 
     .race-title {
+        font-size: 1.8rem;
+        letter-spacing: 1px;
+    }
+
+    .race-title h1 {
+        font-size: 1.8rem;
+    }
+
+    .clock {
+        display: grid;
+        width: 100%;
+        height: auto;
+        padding-bottom: 1rem;
+    }
+
+    #clock-header {
         font-size: 1.2rem;
+        padding-top: 0.5rem;
+    }
+
+    #clock-body {
+        gap: 0.5rem;
+    }
+
+    .time-box {
+        width: 5rem;
+        height: 5rem;
+        padding-top: 0.5rem;
+        border-radius: 8px;
+    }
+
+    .time-box span {
+        font-size: 1.6rem;
+    }
+
+    .time-box p {
+        font-size: 0.9rem;
+        margin-top: 0.2rem;
     }
 
     .buttons {
-        display: block;
+        flex-direction: column;
+        gap: 0.6rem;
     }
 
     #buyNow,
     #watchNow {
         width: 100%;
-        text-align: center;
-    }
-
-    .cards {
-        width: 20rem;
-        height: 12rem;
-    }
-
-    .cards img {
-        width: 20rem;
-        height: 12rem;
-    }
-
-    .news-cards {
-        height: auto;
+        padding: 0.8rem 1.5rem;
+        font-size: 1.1rem;
     }
 
     #track-info {
-        font-size: 1.2rem;
+        font-size: 1.1rem;
+        padding: 1rem;
+    }
+
+    #section-heading {
+        font-size: 1.8rem;
+        padding: 0.8rem;
+    }
+
+    .section-two {
+        margin-left: 1.5rem;
+        margin-right: 1.5rem;
+        width: auto;
+        gap: 1rem;
+    }
+
+    .cards {
+        width: 22rem;
+        height: 13rem;
+        flex: 0 0 auto;
+    }
+
+    .cards img {
+        width: 22rem;
+        height: 13rem;
+        border-radius: 6px;
+    }
+
+    .cards img:hover {
+        transform: none;
+    }
+
+    .section-three {
+        flex-direction: column;
+        margin-left: 1.5rem;
+        margin-right: 1.5rem;
+        width: auto;
+        gap: 1.5rem;
+    }
+
+    .news-cards {
+        width: 100%;
+        height: auto;
+        flex: 0 0 auto;
+        padding-right: 0;
+    }
+
+    .news-cards img {
+        width: 100%;
+        height: 18rem;
+        border-radius: 6px 6px 0 0;
+    }
+
+    .news-cards h2 {
+        font-size: 1.3rem;
+        padding: 1rem;
+    }
+
+    .news-cards:hover {
+        transform: none;
+    }
+
+    footer {
+        flex-direction: column;
+        gap: 0.5rem;
+        text-align: center;
     }
 }
