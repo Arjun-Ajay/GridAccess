@@ -52,7 +52,6 @@
     padding: 1.2rem 2.5rem;
     cursor: pointer;
     transition: all 0.3s ease;
-    font-family: 'Montserrat', sans-serif;
 }
 
 .tab-btn:hover {
@@ -83,16 +82,6 @@
     overflow: hidden;
 }
 
-.race-card::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 20rem;
-    height: 100%;
-    background: linear-gradient(135deg, transparent 40%, rgba(239, 13, 50, 0.03) 100%);
-    pointer-events: none;
-}
 
 .race-card:hover {
     border-color: var(--DeepRed);
@@ -214,7 +203,6 @@
     letter-spacing: 1px;
     cursor: pointer;
     transition: all 0.2s ease;
-    font-family: 'Montserrat', sans-serif;
 }
 
 .btn-results:hover {
@@ -259,25 +247,6 @@
     transform: scale(1.03);
 }
 
-.btn-details {
-    color: var(--clr1);
-    background: transparent;
-    border: 1px solid var(--cardBorder);
-    padding: 1rem 2rem;
-    border-radius: 8px;
-    font-size: 1.3rem;
-    font-weight: 600;
-    letter-spacing: 1px;
-    cursor: pointer;
-    transition: all 0.2s ease;
-    font-family: 'Montserrat', sans-serif;
-}
-
-.btn-details:hover {
-    border-color: var(--clr2);
-    background: var(--lightgrey);
-}
-
 .btn-notify {
     color: var(--clr1);
     background: var(--lightgrey);
@@ -305,6 +274,6 @@ footer {
 }
 
 footer a {
-    color: var(--clr2);
+    color: var(--clr1);
     border-bottom: 1px solid var(--clr2);
 }

@@ -37,12 +37,15 @@ video {
 
 .video-overlay {
     grid-area: 1/1;
-    width: 50vw;
-    height: 50vh;
-    padding-top: 5rem;
-    padding-left: 7rem;
+    width: 60vw;
+    height: 60vh;
+    padding-top: 3rem;
+    padding-left: 5rem;
+    padding-bottom: 2rem;
     z-index: 2;
     justify-content: center;
+    overflow: hidden;
+    box-sizing: border-box;
 }
 
 .nextrace-info {
@@ -98,7 +101,7 @@ video {
 
 .time-box {
     background-color: var(--fadedRed);
-    padding-top: 2rem;
+    padding-top: 1rem;
     border: 1px solid var(--lightgrey);
     border-radius: 15px;
     width: 7rem;
@@ -233,12 +236,14 @@ hr {
 }
 
 .news-cards {
+    flex: 0 0 5rem;
     width: 55rem;
     height: 30rem;
     padding-right: 1rem;
     background-color: var(--fadedRed);
     border: 2px solid transparent;
     border-radius: 8px;
+    overflow: hidden;
 }
 
 .news-cards:hover {
@@ -280,5 +285,115 @@ footer a {
 
     to {
         translate: -100%;
+    }
+}
+
+@media (max-width: 1200px) {
+    .main-content .clock {
+        display: none;
+    }
+
+    .main-content .buttons {
+        display: block;
+    }
+
+    .race-title {
+        font-size: 2.8rem;
+    }
+
+    .video-overlay {
+        padding-top: 3rem;
+        padding-left: 4rem;
+    }
+}
+
+@media (max-width: 768px) {
+    video {
+        width: 90vw;
+        height: 40vh;
+    }
+
+    .video-overlay {
+        width: 85vw;
+        height: 38vh;
+        padding-top: 2rem;
+        padding-left: 3rem;
+    }
+
+    .race-title {
+        font-size: 2rem;
+    }
+
+    .buttons {
+        width: auto;
+        padding: 0.2rem 0.5rem;
+        font-size: 1rem;
+    }
+
+    .section-two {
+        margin-left: 2rem;
+        margin-right: 2rem;
+        width: auto;
+    }
+
+    .section-three {
+        flex-direction: column;
+        margin-left: 2rem;
+        margin-right: 2rem;
+        width: auto;
+    }
+
+    .news-cards {
+        width: 100%;
+    }
+
+    .news-cards img {
+        width: 100%;
+        height: 20rem;
+    }
+}
+
+@media (max-width: 480px) {
+    video {
+        width: 95vw;
+        height: 30vh;
+    }
+
+    .video-overlay {
+        width: 90vw;
+        padding-left: 1.5rem;
+        padding-top: 1rem;
+    }
+
+    .race-title {
+        font-size: 1.2rem;
+    }
+
+    .buttons {
+        display: block;
+    }
+
+    #buyNow,
+    #watchNow {
+        width: 100%;
+        text-align: center;
+    }
+
+    .cards {
+        width: 20rem;
+        height: 12rem;
+    }
+
+    .cards img {
+        width: 20rem;
+        height: 12rem;
+    }
+
+    .news-cards {
+        height: auto;
+    }
+
+    #track-info {
+        font-size: 1.2rem;
     }
 }
