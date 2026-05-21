@@ -28,6 +28,7 @@ body{
     background: linear-gradient(180deg, var(--grad0) 0%, var(--grad100) 100%);
     background-repeat: no-repeat;
     background-size:cover;
+    overflow-x: hidden;
 }
 
 .layout{
