@@ -58,6 +58,8 @@
     border-radius: 12px;
     overflow: hidden;
     transition: all 0.3s ease;
+    content-visibility: auto;
+    contain-intrinsic-size: 350px;
 }
 
 .ticket-card:hover {
@@ -75,10 +77,16 @@
 .ticket-image {
     width: 100%;
     min-height: 22rem;
-    background: linear-gradient(135deg, var(--lightgrey), #1a1315);
+
+    background-color: #1a1315;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+
+    will-change: transform;
+    transform: translateZ(0);
+
+    image-rendering: auto;
 }
 
 /* Ticket Info */
