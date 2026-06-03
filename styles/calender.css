@@ -72,21 +72,21 @@
     border: 1px solid var(--cardBorder);
     border-radius: 12px;
     padding: 2.5rem 3rem;
-    transition: all 0.3s ease;
+    transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1), box-shadow 0.4s cubic-bezier(0.25, 1, 0.5, 1), border-color 0.4s ease;
     position: relative;
     overflow: hidden;
 }
 
 .race-card:hover {
     border-color: var(--DeepRed);
-    box-shadow: 0 0 20px rgba(239, 13, 50, 0.1);
-    transform: translateX(4px);
+    box-shadow: 0 10px 25px rgba(239, 13, 50, 0.15);
+    transform: translateY(-5px);
 }
 
 .race-card.next-race {
     background: var(--nextRaceBg);
     border: 1px solid var(--nextRaceBorder);
-    box-shadow: 0 0 25px rgba(239, 13, 50, 0.08);
+    box-shadow: 0 10px 30px rgba(239, 13, 50, 0.12);
 }
 
 .race-card.next-race::after {
@@ -109,7 +109,7 @@
 .race-info { flex: 1; display: flex; flex-direction: column; gap: 0.5rem; }
 .race-status-date { display: flex; align-items: center; gap: 1rem; }
 .race-date { font-size: 1.3rem; color: var(--clr2); font-weight: 400; }
-.race-name { font-size: 2.4rem; font-weight: 600; color: var(--clr1); letter-spacing: 0.5px; }
+.race-name { font-size: 2.4rem; font-weight: 600; color: var(--clr1); letter-spacing: 0.5px; text-transform: uppercase; }
 .race-location { display: flex; align-items: center; gap: 0.6rem; color: var(--clr2); font-size: 1.3rem; }
 .race-location img { width: 1.4rem; height: 1.4rem; opacity: 0.7; }
 

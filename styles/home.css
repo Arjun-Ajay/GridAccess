@@ -28,7 +28,7 @@
 video {
     grid-area: 1/1;
     width: 60vw;
-    height: 60vh;
+    height: 100%;
     object-fit: cover;
     z-index: 1;
     border: 1px solid var(--lightgrey);
@@ -38,10 +38,11 @@ video {
 .video-overlay {
     grid-area: 1/1;
     width: 60vw;
-    height: 60vh;
+    min-height: 60vh;
+    height: auto;
     padding-top: 3rem;
     padding-left: 5rem;
-    padding-bottom: 2rem;
+    padding-bottom: 3rem;
     z-index: 2;
     justify-content: center;
     overflow: hidden;
@@ -55,6 +56,7 @@ video {
 
 #race-countryname {
     color: var(--DeepRed);
+    margin-right: 1.5rem;
 }
 
 .race-title {
@@ -68,13 +70,13 @@ video {
 
 .clock {
     display: grid;
-    grid-template-rows: 1fr 2fr 1fr;
-    height: 20vh;
-    width: 25vw;
+    grid-template-rows: auto auto auto;
+    height: auto;
+    width: fit-content;
+    padding: 1rem 2rem;
     border: 2px solid var(--lightgrey);
     border-radius: 12px;
-    background-color: black;
-    opacity: 0.7;
+    background-color: rgba(0, 0, 0, 0.7);
 }
 
 #clock-header {
@@ -125,11 +127,12 @@ video {
 #track-info {
     display: flex;
     justify-content: left;
-    padding: 2rem;
+    padding: 1rem 0;
     gap: 1rem;
-    color: var(--clr2);
-    font-weight: 500;
-    font-size: 1.5rem;
+    color: var(--clr1);
+    font-weight: 600;
+    font-size: 1.3rem;
+    align-items: center;
 }
 
 #track-info img {
@@ -190,40 +193,85 @@ hr {
 
 .section-two {
     display: flex;
-    width: 90%;
-    margin: 0 auto;
-    gap: 2rem;
-    overflow-x: hidden;
+    width: 100%;
+    gap: 4rem; /* Lots of space between card groups */
+    overflow: hidden;
+    scroll-behavior: smooth;
+    padding: 1rem 0;
 }
 
 .section-two::-webkit-scrollbar {
     display: none;
 }
 
-.section-two-slider {
+.slider-wrapper {
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.slider-btn {
+    background-color: var(--DeepRed);
+    color: white;
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    cursor: pointer;
+    z-index: 10;
+    transition: background-color 0.2s, transform 0.2s;
+    flex-shrink: 0;
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 1rem;
-    animation: spin 30s infinite linear;
+}
+
+.slider-btn:hover {
+    background-color: var(--LightRed);
+    transform: scale(1.1);
+}
+
+.slider-btn.left {
+    margin-right: -15px;
+}
+
+.slider-btn.right {
+    margin-left: -15px;
+}
+
+.section-two-slider {
+    display: flex;
+    align-items: center;
+    gap: 4rem; /* Generous spacing between cards */
+    animation: spin-cards 30s infinite linear;
+}
+
+.section-two:hover .section-two-slider {
+    animation-play-state: paused;
 }
 
 .cards {
-    flex: 0 0 5rem;
+    flex: 0 0 32rem; /* Keep width consistent */
     width: 32rem;
     height: 18rem;
-    padding-right: 1rem;
 }
 
 .cards img {
     width: 32rem;
     height: 18rem;
     object-fit: cover;
+    border-radius: 12px;
+    border: 2px solid transparent;
+    transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1), box-shadow 0.4s cubic-bezier(0.25, 1, 0.5, 1), border-color 0.4s ease;
 }
 
 .cards img:hover {
-    transform: scale(1.15, 1.15);
-    border: 1px solid var(--clr2);
+    transform: translateY(-8px) scale(1.03);
+    border-color: var(--DeepRed);
+    box-shadow: 0 12px 24px rgba(239, 13, 50, 0.25);
 }
 
 .section-three {
@@ -231,7 +279,9 @@ hr {
     width: 90%;
     margin: 0 auto;
     gap: 2rem;
-    overflow-x: hidden;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 1rem 0;
 }
 
 .section-three::-webkit-scrollbar {
@@ -247,20 +297,20 @@ hr {
 }
 
 .news-cards {
-    flex: 0 0 5rem;
+    flex: 0 0 55rem;
     width: 55rem;
     height: 30rem;
-    padding-right: 1rem;
     background-color: var(--fadedRed);
     border: 2px solid transparent;
-    border-radius: 8px;
+    border-radius: 12px;
     overflow: hidden;
+    transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1), box-shadow 0.4s cubic-bezier(0.25, 1, 0.5, 1), border-color 0.4s ease;
 }
 
 .news-cards:hover {
-    border: 1px solid var(--DeepRed);
-    box-shadow: 0 0 8px var(--DeepRed);
-    transform: scale(1.15, 1.15);
+    transform: translateY(-8px) scale(1.02);
+    border-color: var(--DeepRed);
+    box-shadow: 0 12px 24px rgba(239, 13, 50, 0.25);
 }
 
 .news-cards img {
@@ -299,20 +349,31 @@ footer a {
     }
 }
 
+@keyframes spin-cards {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(calc(-100% - 4rem));
+    }
+}
+
 @media (max-width: 900px) {
 
     video {
         width: 95vw;
-        height: 65vh;
+        height: 100%;
         border-radius: 8px;
     }
 
     .video-overlay {
         width: 95vw;
-        height: 65vh;
+        min-height: 65vh;
+        height: auto;
         padding-top: 7rem;
         padding-left: 1.5rem;
         padding-right: 1.5rem;
+        padding-bottom: 2rem;
     }
 
     .nextrace-info {

@@ -64,3 +64,16 @@ function updateCountdown() {
 
 updateCountdown();
 setInterval(updateCountdown, 1000);
+
+// Seamless slider scroll wrapping for buttons
+const slider = document.querySelector('.section-two');
+if (slider) {
+    slider.addEventListener('scroll', () => {
+        const maxScroll = slider.scrollWidth - slider.clientWidth;
+        if (slider.scrollLeft >= maxScroll - 5) {
+            slider.scrollLeft = 5;
+        } else if (slider.scrollLeft <= 0) {
+            slider.scrollLeft = maxScroll - 5;
+        }
+    });
+}

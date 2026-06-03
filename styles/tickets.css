@@ -60,11 +60,36 @@
     transition: all 0.3s ease;
     content-visibility: auto;
     contain-intrinsic-size: 350px;
+    position: relative;
+}
+
+.ticket-card::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -150%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(239, 13, 50, 0.08) 30%,
+        rgba(255, 255, 255, 0.18) 50%,
+        rgba(239, 13, 50, 0.08) 70%,
+        transparent
+    );
+    transform: skewX(-25deg);
+    transition: left 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+    pointer-events: none;
 }
 
 .ticket-card:hover {
     border-color: var(--DeepRed);
-    box-shadow: 0 0 20px rgba(239, 13, 50, 0.1);
+    box-shadow: 0 10px 25px rgba(239, 13, 50, 0.15);
+}
+
+.ticket-card:hover::after {
+    left: 150%;
 }
 
 .ticket-card.next-race {

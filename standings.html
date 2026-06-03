@@ -33,6 +33,7 @@
                 <li><a href="calender.html">Race Calender</a></li>
                 <li><a href="tickets.html">Tickets</a></li>
                 <li><a id="activeTab" href="standings.html">Standings</a></li>
+                <li><a href="results.html">Results</a></li>
             </ul>
 
             <div class="profile">
@@ -45,38 +46,21 @@
 
         <main class="main-content">
 
-            <div class="hero-bg">
+            <section class="standings-header">
+                <h1>Championship Standings</h1>
+                <p>
+                    Live updates from the 2026 FIA Formula One World Championship.
+                    Track every point, win, and podium in the race for the title.
+                </p>
+            </section>
 
-                <section class="hero">
+            <section class="tabs">
+                <button class="active" id="tab-table" onclick="showTableView()">Driver Standings</button>
+                <button id="tab-cards" onclick="showCardsView()">Driver Profiles</button>
+            </section>
 
-                    <div class="hero-left">
-
-                        <h1>CHAMPIONSHIP</h1>
-                        <h2>STANDINGS</h2>
-
-                        <br>
-
-                        <p style="font-family:'Poppins', sans-serif; font-weight:400; line-height:1.7;">
-                            Live updates from the 2026 FIA Formula One World Championship.
-                            Track every point, win, and podium in the race for the title.
-                        </p>
-
-                    </div>
-
-                    <div class="next-race">
-                        <span>NEXT RACE</span>
-                        <h3>CANADA GRAND PRIX</h3>
-                    </div>
-
-                </section>
-
-                <section class="tabs">
-                    <button class="active">Driver Standings</button>
-                </section>
-
-            </div>
-
-            <section class="standings-table">
+            <section class="standings-table-container" id="table-view">
+                <section class="standings-table">
 
                 <table>
 
@@ -475,8 +459,281 @@
                 </table>
 
             </section>
+        </section>
 
-            <!-- DRIVER COMPARISON PANEL -->
+        <section class="driver-cards-container" id="cards-view" style="display: none;">
+            <div class="driver-cards-grid">
+                <!-- George Russell -->
+                <div class="driver-profile-card team-mer" onclick="openDriverModal('russell')">
+                    <div class="card-bg-gradient"></div>
+                    <div class="card-left">
+                        <span class="driver-team">Mercedes</span>
+                        <h2 class="driver-name">George<br><strong>Russell</strong></h2>
+                        <span class="driver-number">63</span>
+                        <span class="driver-flag">🇬🇧</span>
+                    </div>
+                    <div class="card-right">
+                        <img src="images/Grussel.avif" alt="George Russell" class="driver-card-img">
+                        <div class="driver-number-bg">63</div>
+                    </div>
+                    <div class="card-hover-summary">
+                        <div class="hover-stat"><span>WINS</span><strong>1</strong></div>
+                        <div class="hover-stat"><span>PODIUMS</span><strong>3</strong></div>
+                        <div class="hover-stat"><span>POINTS</span><strong>63</strong></div>
+                    </div>
+                </div>
+
+                <!-- Kimi Antonelli -->
+                <div class="driver-profile-card team-mer" onclick="openDriverModal('antonelli')">
+                    <div class="card-bg-gradient"></div>
+                    <div class="card-left">
+                        <span class="driver-team">Mercedes</span>
+                        <h2 class="driver-name">Kimi<br><strong>Antonelli</strong></h2>
+                        <span class="driver-number">12</span>
+                        <span class="driver-flag">🇮🇹</span>
+                    </div>
+                    <div class="card-right">
+                        <img src="images/KimiA.avif" alt="Kimi Antonelli" class="driver-card-img">
+                        <div class="driver-number-bg">12</div>
+                    </div>
+                    <div class="card-hover-summary">
+                        <div class="hover-stat"><span>WINS</span><strong>2</strong></div>
+                        <div class="hover-stat"><span>PODIUMS</span><strong>3</strong></div>
+                        <div class="hover-stat"><span>POINTS</span><strong>72</strong></div>
+                    </div>
+                </div>
+
+                <!-- Charles Leclerc -->
+                <div class="driver-profile-card team-fer" onclick="openDriverModal('leclerc')">
+                    <div class="card-bg-gradient"></div>
+                    <div class="card-left">
+                        <span class="driver-team">Ferrari</span>
+                        <h2 class="driver-name">Charles<br><strong>Leclerc</strong></h2>
+                        <span class="driver-number">16</span>
+                        <span class="driver-flag">🇲🇨</span>
+                    </div>
+                    <div class="card-right">
+                        <img src="images/Cleclerc.avif" alt="Charles Leclerc" class="driver-card-img">
+                        <div class="driver-number-bg">16</div>
+                    </div>
+                    <div class="card-hover-summary">
+                        <div class="hover-stat"><span>WINS</span><strong>0</strong></div>
+                        <div class="hover-stat"><span>PODIUMS</span><strong>2</strong></div>
+                        <div class="hover-stat"><span>POINTS</span><strong>49</strong></div>
+                    </div>
+                </div>
+
+                <!-- Lewis Hamilton -->
+                <div class="driver-profile-card team-fer" onclick="openDriverModal('hamilton')">
+                    <div class="card-bg-gradient"></div>
+                    <div class="card-left">
+                        <span class="driver-team">Ferrari</span>
+                        <h2 class="driver-name">Lewis<br><strong>Hamilton</strong></h2>
+                        <span class="driver-number">44</span>
+                        <span class="driver-flag">🇬🇧</span>
+                    </div>
+                    <div class="card-right">
+                        <img src="images/Lhami.avif" alt="Lewis Hamilton" class="driver-card-img">
+                        <div class="driver-number-bg">44</div>
+                    </div>
+                    <div class="card-hover-summary">
+                        <div class="hover-stat"><span>WINS</span><strong>0</strong></div>
+                        <div class="hover-stat"><span>PODIUMS</span><strong>2</strong></div>
+                        <div class="hover-stat"><span>POINTS</span><strong>41</strong></div>
+                    </div>
+                </div>
+
+                <!-- Lando Norris -->
+                <div class="driver-profile-card team-mcl" onclick="openDriverModal('norris')">
+                    <div class="card-bg-gradient"></div>
+                    <div class="card-left">
+                        <span class="driver-team">McLaren</span>
+                        <h2 class="driver-name">Lando<br><strong>Norris</strong></h2>
+                        <span class="driver-number">4</span>
+                        <span class="driver-flag">🇬🇧</span>
+                    </div>
+                    <div class="card-right">
+                        <img src="images/Lnorris.avif" alt="Lando Norris" class="driver-card-img">
+                        <div class="driver-number-bg">4</div>
+                    </div>
+                    <div class="card-hover-summary">
+                        <div class="hover-stat"><span>WINS</span><strong>0</strong></div>
+                        <div class="hover-stat"><span>PODIUMS</span><strong>1</strong></div>
+                        <div class="hover-stat"><span>POINTS</span><strong>25</strong></div>
+                    </div>
+                </div>
+
+                <!-- Max Verstappen -->
+                <div class="driver-profile-card team-rbr" onclick="openDriverModal('verstappen')">
+                    <div class="card-bg-gradient"></div>
+                    <div class="card-left">
+                        <span class="driver-team">Red Bull</span>
+                        <h2 class="driver-name">Max<br><strong>Verstappen</strong></h2>
+                        <span class="driver-number">1</span>
+                        <span class="driver-flag">🇳🇱</span>
+                    </div>
+                    <div class="card-right">
+                        <img src="images/Mversappen.avif" alt="Max Verstappen" class="driver-card-img">
+                        <div class="driver-number-bg">1</div>
+                    </div>
+                    <div class="card-hover-summary">
+                        <div class="hover-stat"><span>WINS</span><strong>0</strong></div>
+                        <div class="hover-stat"><span>PODIUMS</span><strong>0</strong></div>
+                        <div class="hover-stat"><span>POINTS</span><strong>12</strong></div>
+                    </div>
+                </div>
+
+                <!-- Oscar Piastri -->
+                <div class="driver-profile-card team-mcl" onclick="openDriverModal('piastri')">
+                    <div class="card-bg-gradient"></div>
+                    <div class="card-left">
+                        <span class="driver-team">McLaren</span>
+                        <h2 class="driver-name">Oscar<br><strong>Piastri</strong></h2>
+                        <span class="driver-number">81</span>
+                        <span class="driver-flag">🇦🇺</span>
+                    </div>
+                    <div class="card-right">
+                        <img src="images/Opiastri.avif" alt="Oscar Piastri" class="driver-card-img">
+                        <div class="driver-number-bg">81</div>
+                    </div>
+                    <div class="card-hover-summary">
+                        <div class="hover-stat"><span>WINS</span><strong>0</strong></div>
+                        <div class="hover-stat"><span>PODIUMS</span><strong>1</strong></div>
+                        <div class="hover-stat"><span>POINTS</span><strong>21</strong></div>
+                    </div>
+                </div>
+
+                <!-- Oliver Bearman -->
+                <div class="driver-profile-card team-haa" onclick="openDriverModal('bearman')">
+                    <div class="card-bg-gradient"></div>
+                    <div class="card-left">
+                        <span class="driver-team">Haas</span>
+                        <h2 class="driver-name">Oliver<br><strong>Bearman</strong></h2>
+                        <span class="driver-number">87</span>
+                        <span class="driver-flag">🇬🇧</span>
+                    </div>
+                    <div class="card-right">
+                        <img src="images/Obearman.avif" alt="Oliver Bearman" class="driver-card-img">
+                        <div class="driver-number-bg">87</div>
+                    </div>
+                    <div class="card-hover-summary">
+                        <div class="hover-stat"><span>WINS</span><strong>0</strong></div>
+                        <div class="hover-stat"><span>PODIUMS</span><strong>0</strong></div>
+                        <div class="hover-stat"><span>POINTS</span><strong>17</strong></div>
+                    </div>
+                </div>
+
+                <!-- Pierre Gasly -->
+                <div class="driver-profile-card team-alp" onclick="openDriverModal('gasly')">
+                    <div class="card-bg-gradient"></div>
+                    <div class="card-left">
+                        <span class="driver-team">Alpine</span>
+                        <h2 class="driver-name">Pierre<br><strong>Gasly</strong></h2>
+                        <span class="driver-number">10</span>
+                        <span class="driver-flag">🇫🇷</span>
+                    </div>
+                    <div class="card-right">
+                        <img src="images/Pgasly.avif" alt="Pierre Gasly" class="driver-card-img">
+                        <div class="driver-number-bg">10</div>
+                    </div>
+                    <div class="card-hover-summary">
+                        <div class="hover-stat"><span>WINS</span><strong>0</strong></div>
+                        <div class="hover-stat"><span>PODIUMS</span><strong>0</strong></div>
+                        <div class="hover-stat"><span>POINTS</span><strong>15</strong></div>
+                    </div>
+                </div>
+
+                <!-- Liam Lawson -->
+                <div class="driver-profile-card team-vca" onclick="openDriverModal('lawson')">
+                    <div class="card-bg-gradient"></div>
+                    <div class="card-left">
+                        <span class="driver-team">Racing Bulls</span>
+                        <h2 class="driver-name">Liam<br><strong>Lawson</strong></h2>
+                        <span class="driver-number">30</span>
+                        <span class="driver-flag">🇳🇿</span>
+                    </div>
+                    <div class="card-right">
+                        <img src="images/Llawson.avif" alt="Liam Lawson" class="driver-card-img">
+                        <div class="driver-number-bg">30</div>
+                    </div>
+                    <div class="card-hover-summary">
+                        <div class="hover-stat"><span>WINS</span><strong>0</strong></div>
+                        <div class="hover-stat"><span>PODIUMS</span><strong>0</strong></div>
+                        <div class="hover-stat"><span>POINTS</span><strong>10</strong></div>
+                    </div>
+                </div>
+
+                <!-- Carlos Sainz Jr -->
+                <div class="driver-profile-card team-wil" onclick="openDriverModal('sainz')">
+                    <div class="card-bg-gradient"></div>
+                    <div class="card-left">
+                        <span class="driver-team">Williams</span>
+                        <h2 class="driver-name">Carlos<br><strong>Sainz Jr</strong></h2>
+                        <span class="driver-number">55</span>
+                        <span class="driver-flag">🇪🇸</span>
+                    </div>
+                    <div class="card-right">
+                        <img src="images/Csainz.avif" alt="Carlos Sainz Jr" class="driver-card-img">
+                        <div class="driver-number-bg">55</div>
+                    </div>
+                    <div class="card-hover-summary">
+                        <div class="hover-stat"><span>WINS</span><strong>0</strong></div>
+                        <div class="hover-stat"><span>PODIUMS</span><strong>0</strong></div>
+                        <div class="hover-stat"><span>POINTS</span><strong>2</strong></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Modal for Driver In-depth Details -->
+        <div id="driver-detail-modal" class="modal">
+            <div class="modal-content">
+                <span class="close-btn" onclick="closeDriverModal()">&times;</span>
+                <div class="modal-body">
+                    <div class="modal-left">
+                        <div class="modal-driver-img-container">
+                            <img id="modal-driver-img" src="" alt="Driver Image" class="modal-driver-img">
+                        </div>
+                        <h1 id="modal-driver-number">12</h1>
+                        <div class="modal-flag-container">
+                            <span id="modal-driver-flag">🇮🇹</span>
+                        </div>
+                        <h2 id="modal-driver-name">Kimi Antonelli</h2>
+                        <p id="modal-driver-team" class="modal-team-subtitle">Mercedes</p>
+                    </div>
+                    <div class="modal-right">
+                        <h3>CAREER PROFILE</h3>
+                        <hr class="modal-divider">
+                        <div class="modal-stats-grid">
+                            <div class="modal-stat-box">
+                                <span class="label">Points</span>
+                                <strong id="modal-points">72</strong>
+                            </div>
+                            <div class="modal-stat-box">
+                                <span class="label">Wins</span>
+                                <strong id="modal-wins">2</strong>
+                            </div>
+                            <div class="modal-stat-box">
+                                <span class="label">Podiums</span>
+                                <strong id="modal-podiums">3</strong>
+                            </div>
+                            <div class="modal-stat-box">
+                                <span class="label">Championships</span>
+                                <strong id="modal-championships">0</strong>
+                            </div>
+                        </div>
+                        <div class="modal-bio">
+                            <h3>BIOGRAPHY</h3>
+                            <p id="modal-bio-text">
+                                Andrea Kimi Antonelli is an Italian racing driver competing in the 2026 FIA Formula One World Championship for Mercedes-AMG Petronas. Highlighted as one of the brightest young talents in motorsport, he secured two grand prix victories this season.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- DRIVER COMPARISON PANEL -->
 
             <section class="comparison-panel">
 

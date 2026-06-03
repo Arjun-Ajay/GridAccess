@@ -1,0 +1,346 @@
+/* ============================
+   RESULTS PAGE STYLES
+   ============================ */
+
+.results-header {
+    padding: 4rem 6rem 2rem;
+}
+
+.results-header h1 {
+    font-size: 4rem;
+    color: var(--clr1);
+    margin-bottom: 1.4rem;
+    font-style: italic;
+    letter-spacing: 2px;
+    border-left: 2px solid var(--DeepRed);
+    padding-left: 1rem;
+    text-transform: uppercase;
+}
+
+.results-header p {
+    max-width: 60rem;
+    line-height: 1.7;
+    color: var(--clr2);
+    font-size: 1.6rem;
+    padding-left: 1rem;
+}
+
+/* ---- Results Grid ---- */
+
+.results-section {
+    padding: 0 6rem 2rem;
+}
+
+.results-section h2 {
+    font-size: 13px;
+    color: #888;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    padding-bottom: 12px;
+    margin-bottom: 24px;
+}
+
+.results-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 40px; /* Generous spacing between cards */
+}
+
+.result-card {
+    background: linear-gradient(160deg, #1e0608, #250a0c);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 14px;
+    overflow: hidden;
+    transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1), box-shadow 0.4s cubic-bezier(0.25, 1, 0.5, 1), border-color 0.4s ease;
+}
+
+.result-card:hover {
+    border-color: #ef0d32;
+    transform: translateY(-8px);
+    box-shadow: 0 12px 28px rgba(239, 13, 50, 0.2);
+}
+
+.result-card-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 24px;
+    background: linear-gradient(90deg, #2a0d10, #1e0608);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.round-info {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.round-num {
+    font-size: 28px;
+    font-weight: 700;
+    color: #ff1e2d;
+    font-style: italic;
+    line-height: 1;
+}
+
+.race-meta h3 {
+    font-size: 15px;
+    font-weight: 700;
+    color: white;
+    text-transform: uppercase; /* Uppercase headings */
+}
+
+.race-meta span {
+    font-size: 11px;
+    color: #888;
+}
+
+.completed-badge {
+    font-size: 10px;
+    font-weight: 700;
+    color: #ff1e2d;
+    border: 1px solid #ff1e2d;
+    padding: 3px 10px;
+    border-radius: 20px;
+    letter-spacing: 1px;
+}
+
+/* Podium inside result card */
+
+.podium-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 24px;
+    gap: 16px;
+}
+
+.podium-driver {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 12px 16px;
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.04);
+    border-radius: 10px;
+    transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.podium-driver:hover {
+    background: rgba(255, 255, 255, 0.04);
+}
+
+.podium-driver:has(.pos-1) {
+    background: linear-gradient(145deg, rgba(255, 215, 0, 0.05), rgba(255, 255, 255, 0.02));
+    border-color: rgba(255, 215, 0, 0.25);
+}
+
+.podium-driver:has(.pos-2) {
+    background: linear-gradient(145deg, rgba(192, 192, 192, 0.04), rgba(255, 255, 255, 0.02));
+    border-color: rgba(192, 192, 192, 0.18);
+}
+
+.podium-driver:has(.pos-3) {
+    background: linear-gradient(145deg, rgba(205, 127, 50, 0.04), rgba(255, 255, 255, 0.02));
+    border-color: rgba(205, 127, 50, 0.18);
+}
+
+.position-medal {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+    font-weight: 700;
+    flex-shrink: 0;
+}
+
+.pos-1 { background: rgba(255, 215, 0, 0.15); color: #ffd700; border: 1px solid rgba(255, 215, 0, 0.4); }
+.pos-2 { background: rgba(192, 192, 192, 0.12); color: #c0c0c0; border: 1px solid rgba(192, 192, 192, 0.3); }
+.pos-3 { background: rgba(205, 127, 50, 0.12); color: #cd7f32; border: 1px solid rgba(205, 127, 50, 0.3); }
+
+.driver-detail strong {
+    display: block;
+    font-size: 13px;
+    color: white;
+    line-height: 1.3;
+}
+
+.driver-detail small {
+    font-size: 10px;
+    color: #888;
+}
+
+/* Extra stats strip */
+
+.result-stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    padding: 16px 24px;
+    background: rgba(0, 0, 0, 0.15);
+    gap: 16px;
+}
+
+.stat-item {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding-left: 16px;
+    border-left: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.stat-item:first-child {
+    border-left: none;
+    padding-left: 0;
+}
+
+.stat-label {
+    font-size: 9px;
+    color: #666;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.stat-value {
+    font-size: 12px;
+    color: #ccc;
+    font-weight: 600;
+}
+
+.stat-value.red {
+    color: #ff1e2d;
+}
+
+/* ---- Bottom Stat Cards ---- */
+
+.main-content .bottom-cards {
+    display: flex;
+    gap: 18px;
+    padding: 30px 60px 50px;
+}
+
+.main-content .card {
+    flex: 1;
+    min-height: 126px;
+    padding: 20px 22px;
+    border-radius: 14px;
+    background: linear-gradient(160deg, #1b0608, #27090d);
+    display: flex;
+    flex-direction: column;
+}
+
+.main-content .card-top {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 18px;
+}
+
+.main-content .icon-box {
+    width: 28px;
+    height: 28px;
+    border-radius: 7px;
+    background: #2a0c10;
+    color: #ff1e2d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+}
+
+.main-content .icon-box.white {
+    background: rgba(255, 255, 255, 0.15);
+    color: white;
+}
+
+.main-content .card h4 {
+    margin: 0;
+    font-size: 11px;
+    color: white;
+    font-style: italic;
+}
+
+.main-content .stat-card p {
+    margin: 0;
+    color: white;
+    font-size: 28px;
+    font-weight: 700;
+    font-style: italic;
+}
+
+.main-content .stat-card small {
+    margin-top: 8px;
+    color: #9d9d9d;
+    font-size: 10px;
+}
+
+.main-content .highlight .alert-text {
+    color: white;
+    font-size: 11px;
+    line-height: 1.7;
+    margin-bottom: 14px;
+}
+
+.main-content .highlight button {
+    margin-top: auto;
+    width: 100%;
+    height: 38px;
+    border: none;
+    border-radius: 8px;
+    background: whitesmoke;
+    color: #111;
+    font-size: 11px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+/* ---- Footer ---- */
+
+.footer {
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    padding: 20px 60px;
+    display: flex;
+    justify-content: space-between;
+    color: #7f7f7f;
+    font-size: 10px;
+}
+
+/* ---- Responsive ---- */
+
+@media (max-width: 480px) {
+    .results-header {
+        padding: 2rem 1.5rem;
+    }
+
+    .results-header h1 {
+        font-size: 2.6rem;
+    }
+
+    .results-header p {
+        font-size: 1.3rem;
+    }
+
+    .results-section { padding: 0 1.5rem 2rem; }
+
+    .result-card-header { flex-direction: column; align-items: flex-start; gap: 10px; padding: 14px 16px; }
+
+    .podium-row {
+        grid-template-columns: 1fr;
+        padding: 14px 16px;
+        gap: 12px;
+    }
+
+    .podium-driver { border-left: none !important; padding: 12px 16px !important; }
+
+    .result-stats { grid-template-columns: repeat(2, 1fr); padding: 16px; gap: 16px; }
+
+    .stat-item { border-left: none !important; padding-left: 0 !important; }
+
+    .main-content .bottom-cards { flex-direction: column; padding: 20px 15px 30px; gap: 12px; }
+    .main-content .stat-card p { font-size: 24px; }
+
+    .footer { flex-direction: column; padding: 15px; gap: 8px; text-align: center; }
+}
