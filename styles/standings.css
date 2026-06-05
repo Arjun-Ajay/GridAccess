@@ -183,10 +183,27 @@
     min-height: 126px;
     padding: 20px 22px;
     border-radius: 14px;
-    background: linear-gradient(160deg, #1b0608, #27090d);
+    background-image: linear-gradient(160deg, #1b0608, #27090d), 
+                      linear-gradient(315deg, var(--DeepRed), rgba(255, 255, 255, 0.08));
+    background-clip: padding-box, border-box;
+    background-origin: padding-box, border-box;
+    border: 2px solid transparent;
     display: flex;
     flex-direction: column;
+    transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1), 
+                box-shadow 0.4s cubic-bezier(0.25, 1, 0.5, 1), 
+                filter 0.4s cubic-bezier(0.25, 1, 0.5, 1),
+                opacity 0.4s ease;
 }
+
+.main-content .card:hover {
+    transform: scale(1.03) translateY(-4px);
+    background-image: linear-gradient(160deg, #25090d, #1b0608), 
+                      linear-gradient(315deg, var(--DeepRed), rgba(255, 255, 255, 0.35));
+    box-shadow: 0 10px 25px rgba(239, 13, 50, 0.25);
+    z-index: 2;
+}
+
 
 .main-content .card-top {
     display: flex;
@@ -437,13 +454,28 @@
     border: 1px solid rgba(255, 255, 255, 0.1);
     color: white;
     border-radius: 12px;
-    padding: 0 20px;
+    padding: 12px 40px 12px 20px;
     font-family: 'Poppins', sans-serif;
     font-size: 15px;
     font-weight: 500;
     outline: none;
     cursor: pointer;
+    box-sizing: border-box;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url("data:image/svg+xml;utf8,<svg fill='white' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/><path d='M0 0h24v24H0z' fill='none'/></svg>");
+    background-repeat: no-repeat;
+    background-position: right 15px center;
+    background-size: 20px;
     transition: border-color 0.2s ease, background 0.2s ease;
+}
+
+.compare-controls select option {
+    background-color: #140406; /* Dark background matching the website's dark theme */
+    color: white;
+    font-size: 15px;
+    padding: 10px 15px;
 }
 
 .compare-controls select:focus {
@@ -601,79 +633,88 @@
 .driver-profile-card {
     position: relative;
     height: 250px;
-    border-radius: 14px;
-    overflow: hidden;
-    cursor: pointer;
-    border: 1px solid rgba(255, 255, 255, 0.08);
-    transition: transform 0.3s cubic-bezier(0.25, 1, 0.5, 1), border-color 0.3s ease, box-shadow 0.3s ease;
+    background: #140406;
     display: flex;
     justify-content: space-between;
     padding: 1.8rem 1rem 1.8rem 0.8rem;
-}
-
-/* Background Gradients by Constructor */
-.driver-profile-card.team-mer {
-    --team-color: #00a19c;
-    background: linear-gradient(135deg, #00a19c 0%, #111111 60%);
-}
-.driver-profile-card.team-fer {
-    --team-color: #ef1a2d;
-    background: linear-gradient(135deg, #ef1a2d 0%, #111111 60%);
-}
-.driver-profile-card.team-mcl {
-    --team-color: #ff8700;
-    background: linear-gradient(135deg, #ff8700 0%, #111111 60%);
-}
-.driver-profile-card.team-rbr {
-    --team-color: #0600ef;
-    background: linear-gradient(135deg, #0600ef 0%, #111111 60%);
-}
-.driver-profile-card.team-haa {
-    --team-color: #e6002b;
-    background: linear-gradient(135deg, #e6002b 0%, #111111 60%);
-}
-.driver-profile-card.team-alp {
-    --team-color: #ff80b0;
-    background: linear-gradient(135deg, #ff80b0 0%, #111111 60%);
-}
-.driver-profile-card.team-vca {
-    --team-color: #002bc5;
-    background: linear-gradient(135deg, #002bc5 0%, #111111 60%);
-}
-.driver-profile-card.team-wil {
-    --team-color: #005aff;
-    background: linear-gradient(135deg, #005aff 0%, #111111 60%);
-}
-
-.driver-profile-card::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 0;
-    bottom: 0;
-    width: 4px;
-    background: var(--team-color, #ff1e2d);
-    z-index: 3;
-    transition: width 0.2s cubic-bezier(0.25, 1, 0.5, 1);
-}
-
-.driver-profile-card:hover::after {
-    width: 7px;
+    overflow: hidden;
+    border-radius: 20px;
+    border: none;
+    transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1), 
+                box-shadow 0.4s cubic-bezier(0.25, 1, 0.5, 1), 
+                filter 0.4s cubic-bezier(0.25, 1, 0.5, 1),
+                opacity 0.4s ease;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.45);
 }
 
 .driver-profile-card::before {
     content: '';
     position: absolute;
     inset: 0;
-    background: linear-gradient(180deg, transparent 40%, rgba(0, 0, 0, 0.85) 100%);
+    background: linear-gradient(315deg, var(--team-color, #ef0d32), rgba(255, 255, 255, 0.15));
+    z-index: 0;
+    transition: opacity 0.3s ease;
+}
+
+.driver-profile-card::after {
+    content: '';
+    position: absolute;
+    inset: 2px;
+    background: #120304;
+    border-radius: 18px;
     z-index: 1;
-    pointer-events: none;
+    transition: background-color 0.3s ease;
 }
 
 .driver-profile-card:hover {
-    transform: translateY(-5px);
-    border-color: rgba(255, 255, 255, 0.3);
-    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.6);
+    transform: scale(1.03) translateY(-6px);
+    box-shadow: 0 12px 28px var(--team-shadow, rgba(239, 13, 50, 0.25));
+    z-index: 10;
+}
+
+.driver-profile-card:hover::after {
+    background: #180507;
+}
+
+/* Background Gradients by Constructor */
+.driver-profile-card.team-mer {
+    --team-color: #00a19c;
+    --team-shadow: rgba(0, 161, 156, 0.25);
+}
+.driver-profile-card.team-fer {
+    --team-color: #ef1a2d;
+    --team-shadow: rgba(239, 26, 45, 0.25);
+}
+.driver-profile-card.team-mcl {
+    --team-color: #ff8700;
+    --team-shadow: rgba(255, 135, 0, 0.25);
+}
+.driver-profile-card.team-rbr {
+    --team-color: #0600ef;
+    --team-shadow: rgba(6, 0, 239, 0.25);
+}
+.driver-profile-card.team-haa {
+    --team-color: #e6002b;
+    --team-shadow: rgba(230, 0, 43, 0.25);
+}
+.driver-profile-card.team-alp {
+    --team-color: #ff80b0;
+    --team-shadow: rgba(255, 128, 176, 0.25);
+}
+.driver-profile-card.team-vca {
+    --team-color: #002bc5;
+    --team-shadow: rgba(0, 43, 197, 0.25);
+}
+.driver-profile-card.team-wil {
+    --team-color: #005aff;
+    --team-shadow: rgba(0, 90, 255, 0.25);
+}
+
+/* Sibling card hover blur & scale down for driver profiles */
+.driver-cards-grid:has(.driver-profile-card:hover) > .driver-profile-card:not(:hover) {
+    filter: blur(8px);
+    transform: scale(0.96);
+    opacity: 0.55;
 }
 
 .card-bg-gradient {

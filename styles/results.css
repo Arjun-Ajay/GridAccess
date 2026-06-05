@@ -52,13 +52,26 @@
     border: 1px solid rgba(255, 255, 255, 0.06);
     border-radius: 14px;
     overflow: hidden;
-    transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1), box-shadow 0.4s cubic-bezier(0.25, 1, 0.5, 1), border-color 0.4s ease;
+    transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1), 
+                box-shadow 0.4s cubic-bezier(0.25, 1, 0.5, 1), 
+                border-color 0.4s ease,
+                filter 0.4s cubic-bezier(0.25, 1, 0.5, 1),
+                opacity 0.4s ease;
 }
 
 .result-card:hover {
     border-color: #ef0d32;
-    transform: translateY(-8px);
-    box-shadow: 0 12px 28px rgba(239, 13, 50, 0.2);
+    transform: scale(1.03) translateY(-8px);
+    box-shadow: 0 12px 28px rgba(239, 13, 50, 0.25);
+    z-index: 2;
+}
+
+/* Sibling card hover blur & scale down (adapted from Uiverse.io) */
+/* The :has() pseudo-class ensures this only triggers when a card is actually being hovered */
+.results-grid:has(.result-card:hover) > .result-card:not(:hover) {
+    filter: blur(8px);
+    transform: scale(0.96);
+    opacity: 0.55;
 }
 
 .result-card-header {
@@ -227,10 +240,27 @@
     min-height: 126px;
     padding: 20px 22px;
     border-radius: 14px;
-    background: linear-gradient(160deg, #1b0608, #27090d);
+    background-image: linear-gradient(160deg, #1b0608, #27090d), 
+                      linear-gradient(315deg, var(--DeepRed, #ef0d32), rgba(255, 255, 255, 0.08));
+    background-clip: padding-box, border-box;
+    background-origin: padding-box, border-box;
+    border: 2px solid transparent;
     display: flex;
     flex-direction: column;
+    transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1), 
+                box-shadow 0.4s cubic-bezier(0.25, 1, 0.5, 1), 
+                filter 0.4s cubic-bezier(0.25, 1, 0.5, 1),
+                opacity 0.4s ease;
 }
+
+.main-content .card:hover {
+    transform: scale(1.03) translateY(-4px);
+    background-image: linear-gradient(160deg, #25090d, #1b0608), 
+                      linear-gradient(315deg, var(--DeepRed, #ef0d32), rgba(255, 255, 255, 0.35));
+    box-shadow: 0 10px 25px rgba(239, 13, 50, 0.25);
+    z-index: 2;
+}
+
 
 .main-content .card-top {
     display: flex;

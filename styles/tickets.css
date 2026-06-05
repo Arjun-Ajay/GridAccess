@@ -53,11 +53,14 @@
 .ticket-card {
     display: grid;
     grid-template-columns: 32rem 1fr;
-    background: var(--cardBg);
-    border: 1px solid var(--cardBorder);
+    background-image: linear-gradient(var(--cardBg), var(--cardBg)), 
+                      linear-gradient(315deg, var(--DeepRed), rgba(255, 255, 255, 0.08));
+    background-clip: padding-box, border-box;
+    background-origin: padding-box, border-box;
+    border: 2px solid transparent;
     border-radius: 12px;
     overflow: hidden;
-    transition: all 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-image 0.3s ease;
     content-visibility: auto;
     contain-intrinsic-size: 350px;
     position: relative;
@@ -81,11 +84,14 @@
     transform: skewX(-25deg);
     transition: left 0.8s cubic-bezier(0.25, 1, 0.5, 1);
     pointer-events: none;
+    z-index: 1;
 }
 
 .ticket-card:hover {
-    border-color: var(--DeepRed);
-    box-shadow: 0 10px 25px rgba(239, 13, 50, 0.15);
+    background-image: linear-gradient(var(--cardBg), var(--cardBg)), 
+                      linear-gradient(315deg, var(--DeepRed), rgba(255, 255, 255, 0.35));
+    box-shadow: 0 10px 25px rgba(239, 13, 50, 0.2);
+    transform: translateY(-4px);
 }
 
 .ticket-card:hover::after {
