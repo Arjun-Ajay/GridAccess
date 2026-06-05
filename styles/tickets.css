@@ -30,6 +30,7 @@
     letter-spacing: 2px;
     border-left: 2px solid var(--DeepRed);
     padding-left: 1rem;
+    text-transform: uppercase;
 }
 
 .tickets-header p {
